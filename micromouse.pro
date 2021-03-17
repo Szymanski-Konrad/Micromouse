@@ -13,13 +13,15 @@ SOURCES += \
     main.cpp \
     maze.cpp \
     micromouse.cpp \
-    tile.cpp
+    tile.cpp \
+    wall.cpp
 
 HEADERS += \
     direction.h \
     maze.h \
     micromouse.h \
-    tile.h
+    tile.h \
+    wall.h
 
 FORMS += \
     micromouse.ui
@@ -30,4 +32,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    example_maze.txt
+    example1.txt \
+    example2.txt \
+    example3.txt \
+    example4.txt \
+    example5.txt

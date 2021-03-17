@@ -1,6 +1,8 @@
 #include "micromouse.h"
 #include "ui_micromouse.h"
 
+const int tileSize = 25;
+
 Micromouse::Micromouse(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Micromouse)
@@ -14,39 +16,20 @@ Micromouse::Micromouse(QWidget *parent)
     ui->setupUi(this);
     ui->comboBox->addItems({"1", "2", "3"});
 
-    Maze* loadedMaze = Maze::fromFile("example_maze.txt");
+    Maze* loadedMaze = Maze::fromFile("example5.txt");
 
-    QGraphicsItem *item = new QGraphicsRectItem(QRectF(300, 300, 100, 100));
-    scene->addItem(item);
-    QGraphicsLineItem *lineItem = new QGraphicsLineItem(0,0,0,50);
-    for (int i = 0; i < 16; i++) {
-        for (int j = 0; j < 16; j++) {
-            lineItem = new QGraphicsLineItem(i*25, j*25, (i+1)*25, j*25);
-            scene->addItem(lineItem);
-            lineItem = new QGraphicsLineItem(i*25, j*25, i*25, (j+1)*25);
+    QGraphicsLineItem *lineItem;
+    for(auto const& tile: loadedMaze->getTiles()) {
+        for (auto wall: tile.wallsCoords()) {
+            lineItem = new QGraphicsLineItem(
+                        wall.getX1()*tileSize,
+                        wall.getY1()*tileSize,
+                        wall.getX2()*tileSize,
+                        wall.getY2()*tileSize);
             scene->addItem(lineItem);
         }
     }
 
-    //lineItem->setPen(_visitedPen);
-    //scene->addItem(lineItem);
-    //lineItem = new QGraphicsLineItem(50,50, 50, 100);
-    //lineItem->setPen(_nonVisitedPen);
-    //scene->addItem(lineItem);
-    //lineItem = new QGraphicsLineItem(50, 100, 100, 100);
-    //scene->addItem(lineItem);
-    //lineItem = new QGraphicsLineItem(100, 100, 150, 100);
-    //scene->addItem(lineItem);
-    //lineItem = new QGraphicsLineItem(150, 100, 150, 150);
-    //scene->addItem(lineItem);
-    //lineItem = new QGraphicsLineItem(150, 150, 200, 150);
-    //scene->addItem(lineItem);
-    //lineItem = new QGraphicsLineItem(200, 150, 200, 250);
-    //scene->addItem(lineItem);
-    //lineItem = new QGraphicsLineItem(50, 100, 100, 100);
-    //scene->addItem(lineItem);
-    //lineItem = new QGraphicsLineItem(50, 100, 100, 100);
-    //scene->addItem(lineItem);
     ui->graphicsView->setScene(scene);
     qDebug() << scene->height();
     qDebug() << scene->width();

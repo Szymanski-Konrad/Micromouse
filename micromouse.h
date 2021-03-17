@@ -19,8 +19,10 @@ public:
     Micromouse(QWidget *parent = nullptr);
     ~Micromouse();
 
+
 private:
     Ui::Micromouse *ui;
     QGraphicsScene *scene;
+    void printWall(DIRECTION direction, Tile tile);
 };
 #endif // MICROMOUSE_H

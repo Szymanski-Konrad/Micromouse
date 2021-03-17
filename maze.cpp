@@ -4,6 +4,13 @@ Maze::Maze() {
 
 }
 
+Maze::Maze(std::vector<std::vector<int>> tiles) {
+    for (auto const& tile: tiles) {
+        std::unique_ptr<Tile> tmp(new Tile(tile));
+        this->tiles.push_back(*tmp);
+    }
+}
+
 Maze* Maze::fromFile(const std::string path) {
     if (path.empty()) {
         return nullptr;
@@ -12,22 +19,34 @@ Maze* Maze::fromFile(const std::string path) {
     std::ifstream infile(path);
 
     std::string line;
-    std::vector<std::string> lines;
-    qDebug()<<infile.is_open();
-    for (line; std::getline(infile, line);) {
-        qDebug()<<line.c_str();
+    std::string str;
+    std::vector<int> tile;
+    std::vector<std::vector<int>> tiles;
+    std::stringstream ss;
+    while (std::getline(infile, line)) {
+        ss.str(line);
+        while(ss >> str) {
+            tile.push_back(std::stoi(str));
+        }
+        tiles.push_back(tile);
+        tile.clear();
+        ss.clear();
     }
     infile.close();
 
-    return nullptr;
+    return new Maze(tiles);
 }
 
 int Maze::getHeight() const {
-    return tiles.size();
+    return std::sqrt(tiles.size());
 }
 
 int Maze::getWidth() const {
-    return tiles.at(0).size();
+    return std::sqrt(tiles.size());
+}
+
+std::vector<Tile> Maze::getTiles() const {
+    return tiles;
 }
 
 
