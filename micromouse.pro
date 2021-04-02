@@ -9,17 +9,25 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    algorythms/algorythm.cpp \
+    algorythms/force_algorythm.cpp \
     direction.cpp \
+    gamecontroller.cpp \
     main.cpp \
     maze.cpp \
     micromouse.cpp \
+    mouse.cpp \
     tile.cpp \
     wall.cpp
 
 HEADERS += \
+    algorythms/algorythm.h \
+    algorythms/force_algorythm.h \
     direction.h \
+    gamecontroller.h \
     maze.h \
     micromouse.h \
+    mouse.h \
     tile.h \
     wall.h
 

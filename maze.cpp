@@ -49,4 +49,8 @@ std::vector<Tile> Maze::getTiles() const {
     return tiles;
 }
 
+bool Maze::isInCenter(int x, int y) {
+    return inRange.contains(x) && inRange.contains(y);
+}
+
 

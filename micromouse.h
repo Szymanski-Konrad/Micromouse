@@ -4,7 +4,8 @@
 #include <QMainWindow>
 #include <QGraphicsRectItem>
 #include <QDebug>
-#include <maze.h>
+#include <gamecontroller.h>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Micromouse; }

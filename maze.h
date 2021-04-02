@@ -9,6 +9,25 @@
 
 #include<QDebug>
 
+
+
+template<typename T>
+class Interval
+{
+public:
+    Interval(T lo, T hi) : low(lo), high(hi) {}
+    bool contains(T value) const { return low <= value && value < high; }
+private:
+    T low;
+    T high;
+};
+template<typename T>
+Interval<T> interval(T lo, T hi) { return Interval<T>(lo, hi); }
+
+const int lowMiddle = 7;
+const int hightMiddle = 8;
+const Interval<int> inRange = Interval<int>(lowMiddle, hightMiddle);
+
 class Maze
 {
 public:
@@ -21,10 +40,11 @@ public:
     const Tile* getTile(int x, int y) const;
     std::vector<Tile> getTiles() const;
     bool isCenter(std::pair<int, int> location) const;
+    bool isInCenter(int x, int y);
 
 private:
     std::vector<Tile> tiles;
-    static std::vector<std::pair<int,int>> getCenterPosition(int width, int height);
+
 };
 
 #endif // MAZE_H

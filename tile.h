@@ -18,6 +18,7 @@ public:
     int getY() const;
     bool isWall(DIRECTION direction) const;
     std::vector<Wall> wallsCoords() const;
+    bool operator<(Tile other) const;
 private:
     int x;
     int y;

@@ -6,6 +6,10 @@ Tile::Tile(int x, int y, std::map<DIRECTION, bool> checkWalls) :
 
 }
 
+bool Tile::operator<(Tile other) const {
+    return other.x < x || other.y < y;
+}
+
 Tile::Tile(std::vector<int> values) {
     assert(values.size() == 6);
     this->x = values.at(0);
