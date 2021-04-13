@@ -10,7 +10,10 @@ CONFIG += c++11
 
 SOURCES += \
     algorythms/algorythm.cpp \
-    algorythms/force_algorythm.cpp \
+    algorythms/flood_fill_algorythm.cpp \
+    algorythms/left_algorythm.cpp \
+    algorythms/random_algorythm.cpp \
+    algorythms/right_algorythm.cpp \
     direction.cpp \
     gamecontroller.cpp \
     main.cpp \
@@ -22,7 +25,10 @@ SOURCES += \
 
 HEADERS += \
     algorythms/algorythm.h \
-    algorythms/force_algorythm.h \
+    algorythms/flood_fill_algorythm.h \
+    algorythms/left_algorythm.h \
+    algorythms/random_algorythm.h \
+    algorythms/right_algorythm.h \
     direction.h \
     gamecontroller.h \
     maze.h \

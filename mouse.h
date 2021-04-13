@@ -14,15 +14,16 @@ public:
     static Mouse* startPosition();
     int getX();
     int getY();
-    void moveDown();
-    void moveLeft();
-    void moveRight();
-    void moveUp();
+    void rotateLeft();
+    void rotateRight();
+    DIRECTION getDirection();
+    void moveForward();
     void visitTile(Tile tile);
     std::vector<Tile> getVisitedTiles();
 private:
     int x;
     int y;
+    DIRECTION moveDirection;
     std::set<Tile> visitedTiles;
 };
 

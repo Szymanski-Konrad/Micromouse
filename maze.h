@@ -37,7 +37,7 @@ public:
     static Maze* fromFile(const std::string path);
     int getWidth() const;
     int getHeight() const;
-    const Tile* getTile(int x, int y) const;
+    Tile getTile(int x, int y) const;
     std::vector<Tile> getTiles() const;
     bool isCenter(std::pair<int, int> location) const;
     bool isInCenter(int x, int y);

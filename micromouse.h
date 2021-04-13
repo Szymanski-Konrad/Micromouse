@@ -6,6 +6,8 @@
 #include <QDebug>
 #include <gamecontroller.h>
 
+#include <QTimer>
+#include <QDateTime>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Micromouse; }
@@ -24,6 +26,9 @@ public:
 private:
     Ui::Micromouse *ui;
     QGraphicsScene *scene;
+    std::shared_ptr<GameController> controller;
     void printWall(DIRECTION direction, Tile tile);
+    void printScene();
+    double getTimeStamp();
 };
 #endif // MICROMOUSE_H

@@ -7,6 +7,8 @@
 #include <assert.h>
 #include <wall.h>
 
+#include <algorithm>
+
 class Tile
 {
 public:
@@ -18,6 +20,7 @@ public:
     int getY() const;
     bool isWall(DIRECTION direction) const;
     std::vector<Wall> wallsCoords() const;
+    std::vector<DIRECTION> possibleDirections() const;
     bool operator<(Tile other) const;
 private:
     int x;

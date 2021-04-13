@@ -12,7 +12,7 @@ public:
     GameController();
     void resetGame();
     void setAlgorythm(ALGORYTHM algorythm);
-    ALGORYTHM getAlgorythm();
+    Algorythm getAlgorythm();
     std::string getMazeFile();
     void setMazeFile(std::string mazeFile);
     Maze* getMaze();
@@ -21,11 +21,10 @@ public:
     int mouseY();
 
 private:
-    ALGORYTHM selectedAlgorythm;
+    Algorythm selectedAlgorythm;
     Maze* currentMaze;
     Mouse* mouse;
     std::string mazeFile;
-
 };
 
 #endif // GAMECONTROLLER_H

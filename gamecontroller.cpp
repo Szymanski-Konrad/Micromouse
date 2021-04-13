@@ -14,10 +14,23 @@ void GameController::resetGame() {
 }
 
 void GameController::setAlgorythm(ALGORYTHM algorythm) {
-    this->selectedAlgorythm = algorythm;
+    switch (algorythm) {
+    case ALGORYTHM::RIGHT_FIRST:
+        this->selectedAlgorythm = new RightAlgorythm();
+        break;
+    case ALGORYTHM::LEFT_FIRST:
+        this->selectedAlgorythm = new LeftAlgorythm();
+        break;
+    case ALGORYTHM::RANDOM:
+        this->selectedAlgorythm = new RandomAlgorythm();
+        break;
+    case ALGORYTHM::FLOOD_FILL:
+        this->selectedAlgorythm = new FloodFillAlgorythm();
+        break;
+    }
 }
 
-ALGORYTHM GameController::getAlgorythm() {
+Algorythm GameController::getAlgorythm() {
     return this->selectedAlgorythm;
 }
 
