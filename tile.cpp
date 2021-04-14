@@ -49,7 +49,7 @@ std::vector<Wall> Tile::wallsCoords() const {
 std::vector<DIRECTION> Tile::possibleDirections() const {
     std::vector<DIRECTION> possibleDirections;
     for (auto &i: checkWalls) {
-        if (i.second) possibleDirections.push_back(i.first);
+        if (!i.second) possibleDirections.push_back(i.first);
     }
     return possibleDirections;
 }

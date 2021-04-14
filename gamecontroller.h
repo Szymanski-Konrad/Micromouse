@@ -3,7 +3,10 @@
 
 #include "maze.h"
 #include "mouse.h"
-#include "algorythms/algorythm.h"
+#include "algorythms/random_algorythm.h"
+#include "algorythms/flood_fill_algorythm.h"
+#include "algorythms/left_algorythm.h"
+#include "algorythms/right_algorythm.h"
 
 
 class GameController
@@ -17,11 +20,12 @@ public:
     void setMazeFile(std::string mazeFile);
     Maze* getMaze();
     Mouse* getMouse();
+    void moveMouse();
     int mouseX();
     int mouseY();
 
 private:
-    Algorythm selectedAlgorythm;
+    std::shared_ptr<Algorythm> selectedAlgorythm;
     Maze* currentMaze;
     Mouse* mouse;
     std::string mazeFile;

@@ -9,6 +9,7 @@ Micromouse::Micromouse(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Micromouse)
     , scene(new QGraphicsScene(this))
+    , mouseScene(new QGraphicsScene(this))
 {
     static QPen _nonVisitedPen;
     static QPen _visitedPen;
@@ -17,29 +18,14 @@ Micromouse::Micromouse(QWidget *parent)
 
     ui->setupUi(this);
     ui->comboBox->addItems({"force", "bellman", "propagation"});
-    controller = std::shared_ptr<GameController> (new GameController);
-    controller.get()->
+    controller.reset(new GameController());
+
+    // set scenes
+    ui->userGraphicsView->setScene(mouseScene);
+    ui->graphicsView->setScene(scene);
+
     // Start the graphics loop
     double secondsPerFrame = 1.0 / 60;
-    QTimer* mapTimer = new QTimer();
-    connect(
-                mapTimer, &QTimer::timeout,
-                this, [=](){
-        // Hack to prevent file dialog from locking up...
-        static double then = SimUtilities::getHighResTimestamp();
-        double now = SimUtilities::getHighResTimestamp();
-        if (now - then < secondsPerFrame) {
-            return;
-        }
-        m_map->update();
-        then = now;
-    }
-    );
-    mapTimer->start(secondsPerFrame * 1000);
-
-
-
-
     QTimer* mapTimer = new QTimer();
     connect(
         mapTimer, &QTimer::timeout,
@@ -53,6 +39,7 @@ Micromouse::Micromouse(QWidget *parent)
         then = now;
     }
     );
+    mapTimer->start(100);
 }
 
 double Micromouse::getTimeStamp() {
@@ -60,6 +47,8 @@ double Micromouse::getTimeStamp() {
 }
 
 void Micromouse::printScene() {
+    scene->clear();
+    mouseScene->clear();
     QGraphicsLineItem *lineItem;
     for(auto const& tile: controller->getMaze()->getTiles()) {
         for (auto wall: tile.wallsCoords()) {
@@ -71,16 +60,58 @@ void Micromouse::printScene() {
             scene->addItem(lineItem);
         }
     }
+    scene->addPolygon(generateMousePolygon());
 
-    QGraphicsItem* mouseItem = new QGraphicsRectItem(controller->mouseX(), controller->mouseY(), mouseHeight, mouseWidth);
-    scene->addItem(mouseItem);
-    ui->graphicsView->setScene(scene);
-    ui->userGraphicsView->setScene(scene);
-    qDebug() << scene->height();
-    qDebug() << scene->width();
+    for(auto const& tile: controller->getMouse()->getVisitedTiles()) {
+        for (auto wall: tile.wallsCoords()) {
+            lineItem = new QGraphicsLineItem(
+                        wall.getX1()*tileSize,
+                        wall.getY1()*tileSize,
+                        wall.getX2()*tileSize,
+                        wall.getY2()*tileSize);
+            mouseScene->addItem(lineItem);
+        }
+    }
 
-    controller->getAlgorythm();
+    mouseScene->addPolygon(generateMousePolygon());
 
+    controller->moveMouse();
+}
+
+QPolygonF Micromouse::generateMousePolygon() {
+    QPolygonF triangle;
+    Mouse* mouse = controller->getMouse();
+    int x = mouse->getX();
+    int y = mouse->getY();
+
+    switch (mouse->getDirection()) {
+    case DIRECTION::NORTH:
+        triangle.append(QPointF(x * tileSize,(y+1) * tileSize));
+        triangle.append(QPointF((x+1) * tileSize, (y+1) * tileSize));
+        triangle.append(QPointF(x * tileSize + tileSize / 2, y * tileSize));
+        triangle.append(QPointF(x * tileSize,(y+1) * tileSize));
+        break;
+    case DIRECTION::EAST:
+        triangle.append(QPointF((x+1) * tileSize, y * tileSize));
+        triangle.append(QPointF((x+1) * tileSize, (y+1) * tileSize));
+        triangle.append(QPointF(x * tileSize, y * tileSize + tileSize / 2));
+        triangle.append(QPointF((x+1) * tileSize, y * tileSize));
+        break;
+    case DIRECTION::WEST:
+        triangle.append(QPointF(x * tileSize,y * tileSize));
+        triangle.append(QPointF(x * tileSize, (y+1) * tileSize));
+        triangle.append(QPointF((x+1) * tileSize, y * tileSize + tileSize / 2));
+        triangle.append(QPointF(x * tileSize,y * tileSize));
+        break;
+    case DIRECTION::SOUTH:
+        triangle.append(QPointF(x * tileSize, y * tileSize));
+        triangle.append(QPointF((x+1) * tileSize, y * tileSize));
+        triangle.append(QPointF(x * tileSize + tileSize / 2, (y+1) * tileSize));
+        triangle.append(QPointF(x * tileSize, y * tileSize));
+        break;
+    }
+
+    return triangle;
 }
 
 Micromouse::~Micromouse()

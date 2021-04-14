@@ -26,9 +26,11 @@ public:
 private:
     Ui::Micromouse *ui;
     QGraphicsScene *scene;
+    QGraphicsScene *mouseScene;
     std::shared_ptr<GameController> controller;
     void printWall(DIRECTION direction, Tile tile);
     void printScene();
+    QPolygonF generateMousePolygon();
     double getTimeStamp();
 };
 #endif // MICROMOUSE_H

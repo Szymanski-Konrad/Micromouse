@@ -1,5 +1,5 @@
 #include "mouse.h"
-
+#include "qdebug.h"
 
 Mouse::Mouse()
 {
@@ -9,6 +9,7 @@ Mouse::Mouse()
 Mouse::Mouse(int x, int y) {
     this->x = x;
     this->y = y;
+    this->moveDirection = DIRECTION::SOUTH;
 }
 
 Mouse* Mouse::startPosition() {
@@ -27,6 +28,10 @@ DIRECTION Mouse::getDirection() {
     return this->moveDirection;
 }
 
+void Mouse::rotateToDirection(DIRECTION direction) {
+    this->moveDirection = direction;
+}
+
 int Mouse::getX() {
     return this->x;
 }
@@ -37,9 +42,9 @@ int Mouse::getY() {
 
 void Mouse::moveForward() {
     if (moveDirection == DIRECTION::NORTH) {
-        this->y += 1;
-    } else if (moveDirection == DIRECTION::SOUTH) {
         this->y -= 1;
+    } else if (moveDirection == DIRECTION::SOUTH) {
+        this->y += 1;
     } else if (moveDirection == DIRECTION::EAST) {
         this->x += 1;
     } else if (moveDirection == DIRECTION::WEST) {

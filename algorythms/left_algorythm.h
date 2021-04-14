@@ -3,8 +3,8 @@
 
 #include "algorythm.h"
 
-class LeftAlgorythm : public Algorythm
-{
+class LeftAlgorythm : public Algorythm {
+
 public:
     LeftAlgorythm();
     void calculateDistance(Maze& maze, Mouse& mouse);

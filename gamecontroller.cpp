@@ -2,7 +2,7 @@
 
 GameController::GameController()
 {   
-    this->selectedAlgorythm = ALGORYTHM::BRUTE_FORCE;
+    this->selectedAlgorythm.reset(new RandomAlgorythm());
     this->mazeFile = "example5.txt";
     this->currentMaze = Maze::fromFile(mazeFile);
     this->mouse = Mouse::startPosition();
@@ -16,22 +16,22 @@ void GameController::resetGame() {
 void GameController::setAlgorythm(ALGORYTHM algorythm) {
     switch (algorythm) {
     case ALGORYTHM::RIGHT_FIRST:
-        this->selectedAlgorythm = new RightAlgorythm();
+        this->selectedAlgorythm.reset(new RightAlgorythm());
         break;
     case ALGORYTHM::LEFT_FIRST:
-        this->selectedAlgorythm = new LeftAlgorythm();
+        this->selectedAlgorythm.reset(new LeftAlgorythm());
         break;
     case ALGORYTHM::RANDOM:
-        this->selectedAlgorythm = new RandomAlgorythm();
+        this->selectedAlgorythm.reset(new RandomAlgorythm());
         break;
     case ALGORYTHM::FLOOD_FILL:
-        this->selectedAlgorythm = new FloodFillAlgorythm();
+        this->selectedAlgorythm.reset(new FloodFillAlgorythm());
         break;
     }
 }
 
 Algorythm GameController::getAlgorythm() {
-    return this->selectedAlgorythm;
+    return *this->selectedAlgorythm;
 }
 
 std::string GameController::getMazeFile() {
@@ -57,5 +57,10 @@ int GameController::mouseX() {
 int GameController::mouseY() {
     return this->mouse->getY();
 }
+
+void GameController::moveMouse() {
+    this->selectedAlgorythm.get()->makeMove(*this->currentMaze, *this->mouse);
+}
+
 
 

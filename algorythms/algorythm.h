@@ -5,10 +5,6 @@
 #include "mouse.h"
 #include "direction.h"
 #include "algorithm"
-#include "random_algorythm.h"
-#include "flood_fill_algorythm.h"
-#include "left_algorythm.h"
-#include "right_algorythm.h"
 
 enum class ALGORYTHM {
   RIGHT_FIRST,
@@ -21,8 +17,9 @@ class Algorythm
 {
 public:
     Algorythm();
-    virtual void calculateDistance(Maze& maze, Mouse& mouse);
-    virtual void makeMove(Maze& maze, Mouse& mouse);
+    virtual void calculateDistance(Maze& maze, Mouse& mouse) { };
+    virtual void makeMove(Maze& maze, Mouse& mouse) { };
+    ~Algorythm() {};
 };
 
 #endif // ALGORYTHM_H

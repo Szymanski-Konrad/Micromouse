@@ -50,7 +50,8 @@ std::vector<Tile> Maze::getTiles() const {
 }
 
 Tile Maze::getTile(int x, int y) const {
-    return *std::find_if(tiles.begin(), tiles.end(), [&](const Tile& obj) { return obj.getX() == x && obj.getY() == y; });
+    auto tile = *std::find_if(tiles.begin(), tiles.end(), [&](const Tile& obj) { return obj.getX() == x && obj.getY() == y; });
+    return tile;
 }
 
 bool Maze::isInCenter(int x, int y) {
