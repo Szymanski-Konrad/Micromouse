@@ -20,9 +20,10 @@ public:
     void setMazeFile(std::string mazeFile);
     Maze* getMaze();
     Mouse* getMouse();
-    void moveMouse();
+    bool moveMouse();
     int mouseX();
     int mouseY();
+    bool isReachEnd();
 
 private:
     std::shared_ptr<Algorythm> selectedAlgorythm;

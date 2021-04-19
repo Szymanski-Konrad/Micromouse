@@ -23,6 +23,7 @@ Micromouse::Micromouse(QWidget *parent)
     // set scenes
     ui->userGraphicsView->setScene(mouseScene);
     ui->graphicsView->setScene(scene);
+    printScene();
 
     // Start the graphics loop
     double secondsPerFrame = 1.0 / 60;
@@ -35,6 +36,7 @@ Micromouse::Micromouse(QWidget *parent)
         if (now - then < secondsPerFrame) {
             return;
         }
+        moveMouse();
         printScene();
         then = now;
     }
@@ -74,8 +76,17 @@ void Micromouse::printScene() {
     }
 
     mouseScene->addPolygon(generateMousePolygon());
+}
 
-    controller->moveMouse();
+void Micromouse::moveMouse() {
+    if (controller->moveMouse()) {
+        QMessageBox *winBox = new QMessageBox;
+        winBox->setWindowTitle("Congratulation!!");
+        winBox->setIcon(QMessageBox::Information);
+        winBox->setText("Mouse reach center of maze");
+        winBox->exec();
+        controller->resetGame();
+    };
 }
 
 QPolygonF Micromouse::generateMousePolygon() {
@@ -91,13 +102,13 @@ QPolygonF Micromouse::generateMousePolygon() {
         triangle.append(QPointF(x * tileSize + tileSize / 2, y * tileSize));
         triangle.append(QPointF(x * tileSize,(y+1) * tileSize));
         break;
-    case DIRECTION::EAST:
+    case DIRECTION::WEST:
         triangle.append(QPointF((x+1) * tileSize, y * tileSize));
         triangle.append(QPointF((x+1) * tileSize, (y+1) * tileSize));
         triangle.append(QPointF(x * tileSize, y * tileSize + tileSize / 2));
         triangle.append(QPointF((x+1) * tileSize, y * tileSize));
         break;
-    case DIRECTION::WEST:
+    case DIRECTION::EAST:
         triangle.append(QPointF(x * tileSize,y * tileSize));
         triangle.append(QPointF(x * tileSize, (y+1) * tileSize));
         triangle.append(QPointF((x+1) * tileSize, y * tileSize + tileSize / 2));

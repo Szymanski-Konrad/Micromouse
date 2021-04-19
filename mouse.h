@@ -17,6 +17,7 @@ public:
     void rotateLeft();
     void rotateRight();
     void rotateToDirection(DIRECTION direction);
+    void turnBack();
     DIRECTION getDirection();
     void moveForward();
     void visitTile(Tile tile);

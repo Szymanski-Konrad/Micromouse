@@ -33,6 +33,13 @@ const std::map<DIRECTION, DIRECTION> rotateRightMap = {
     {DIRECTION::WEST, DIRECTION::NORTH},
 };
 
+const std::map<DIRECTION, DIRECTION> rotateBackMap = {
+    {DIRECTION::NORTH, DIRECTION::SOUTH},
+    {DIRECTION::EAST, DIRECTION::WEST},
+    {DIRECTION::SOUTH, DIRECTION::NORTH},
+    {DIRECTION::WEST, DIRECTION::EAST},
+};
+
 class Direction
 {
 public:

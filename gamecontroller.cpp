@@ -2,7 +2,7 @@
 
 GameController::GameController()
 {   
-    this->selectedAlgorythm.reset(new RandomAlgorythm());
+    this->selectedAlgorythm.reset(new LeftAlgorythm());
     this->mazeFile = "example5.txt";
     this->currentMaze = Maze::fromFile(mazeFile);
     this->mouse = Mouse::startPosition();
@@ -28,6 +28,11 @@ void GameController::setAlgorythm(ALGORYTHM algorythm) {
         this->selectedAlgorythm.reset(new FloodFillAlgorythm());
         break;
     }
+}
+
+bool GameController::isReachEnd() {
+    //TODO: Napisać sprawdzanie czy mysz znajduje się w środku
+    return this->currentMaze->isInCenter(mouse->getX(), mouse->getY());
 }
 
 Algorythm GameController::getAlgorythm() {
@@ -58,8 +63,9 @@ int GameController::mouseY() {
     return this->mouse->getY();
 }
 
-void GameController::moveMouse() {
+bool GameController::moveMouse() {
     this->selectedAlgorythm.get()->makeMove(*this->currentMaze, *this->mouse);
+    return isReachEnd();
 }
 
 

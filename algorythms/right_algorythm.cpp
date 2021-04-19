@@ -15,18 +15,25 @@ void RightAlgorythm::makeMove(Maze &maze, Mouse &mouse) {
     auto isRightPossible = std::find_if(possibleDirections.begin(), possibleDirections.end(), [rotateDirection](DIRECTION object){ return object == rotateDirection;});
     if (isRightPossible != possibleDirections.end()) {
         mouse.rotateRight();
-        mouse.moveForward();
-        mouse.visitTile(maze.getTile(mouse.getX(), mouse.getY()));
     }
     else {
         DIRECTION mouseDirection = mouse.getDirection();
         auto isForwardPossible = std::find_if(possibleDirections.begin(), possibleDirections.end(), [mouseDirection](DIRECTION object){ return object == mouseDirection;});
         if (isForwardPossible != possibleDirections.end()) {
-            mouse.moveForward();
-            mouse.visitTile(maze.getTile(mouse.getX(), mouse.getY()));
+
         }
         else {
-            mouse.rotateRight();
+            rotateDirection = rotateLeftMap.at(mouse.getDirection());
+            auto isLeftPossible = std::find_if(possibleDirections.begin(), possibleDirections.end(), [rotateDirection](DIRECTION object){ return object == rotateDirection;});
+            if (isLeftPossible != possibleDirections.end()) {
+                mouse.rotateLeft();
+            }
+            else {
+                mouse.turnBack();
+            }
         }
     }
+
+    mouse.moveForward();
+    mouse.visitTile(maze.getTile(mouse.getX(), mouse.getY()));
 }

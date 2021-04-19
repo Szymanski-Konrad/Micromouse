@@ -8,6 +8,7 @@
 
 #include <QTimer>
 #include <QDateTime>
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Micromouse; }
@@ -30,6 +31,7 @@ private:
     std::shared_ptr<GameController> controller;
     void printWall(DIRECTION direction, Tile tile);
     void printScene();
+    void moveMouse();
     QPolygonF generateMousePolygon();
     double getTimeStamp();
 };

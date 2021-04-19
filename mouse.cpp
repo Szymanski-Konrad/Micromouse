@@ -16,6 +16,10 @@ Mouse* Mouse::startPosition() {
     return new Mouse(0, 0);
 }
 
+void Mouse::turnBack() {
+    this->moveDirection = rotateBackMap.at(this->moveDirection);
+}
+
 void Mouse::rotateRight() {
     this->moveDirection = rotateRightMap.at(this->moveDirection);
 }
@@ -53,6 +57,7 @@ void Mouse::moveForward() {
 }
 
 void Mouse::visitTile(Tile tile) {
+    //TODO: Dodawać tylko nowe pola;
     this->visitedTiles.insert(tile);
 }
 
