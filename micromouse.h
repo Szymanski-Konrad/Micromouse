@@ -32,7 +32,12 @@ private:
     void printWall(DIRECTION direction, Tile tile);
     void printScene();
     void moveMouse();
+    void startTimer();
+    void compVsPlayer();
+    void restart();
+    void randomMaze();
     QPolygonF generateMousePolygon();
     double getTimeStamp();
+    std::unique_ptr<QTimer> mapTimer;
 };
 #endif // MICROMOUSE_H

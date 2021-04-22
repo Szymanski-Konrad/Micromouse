@@ -2,8 +2,6 @@
 #include "ui_micromouse.h"
 
 const int tileSize = 25;
-const int mouseHeight = 20;
-const int mouseWidth = 15;
 
 Micromouse::Micromouse(QWidget *parent)
     : QMainWindow(parent)
@@ -11,13 +9,8 @@ Micromouse::Micromouse(QWidget *parent)
     , scene(new QGraphicsScene(this))
     , mouseScene(new QGraphicsScene(this))
 {
-    static QPen _nonVisitedPen;
-    static QPen _visitedPen;
-    _nonVisitedPen.setColor(Qt::red);
-    _visitedPen.setColor(Qt::blue);
-
     ui->setupUi(this);
-    ui->comboBox->addItems({"force", "bellman", "propagation"});
+    ui->algorythmComboBox->addItems({"left-side", "right-side", "random"});
     controller.reset(new GameController());
 
     // set scenes
@@ -25,11 +18,18 @@ Micromouse::Micromouse(QWidget *parent)
     ui->graphicsView->setScene(scene);
     printScene();
 
-    // Start the graphics loop
+    // Set buttons actions
+    connect(ui->startButton, &QPushButton::released, this, &Micromouse::startTimer);
+    connect(ui->restartButton, &QPushButton::released, this, &Micromouse::restart);
+    connect(ui->versusButton, &QPushButton::released, this, &Micromouse::compVsPlayer);
+    connect(ui->randomMazeButton, &QPushButton::released, this, &Micromouse::randomMaze);
+
+
+    // Set the graphics loop
     double secondsPerFrame = 1.0 / 60;
-    QTimer* mapTimer = new QTimer();
+    mapTimer.reset(new QTimer());
     connect(
-        mapTimer, &QTimer::timeout,
+        mapTimer.get(), &QTimer::timeout,
         this, [=](){
         static double then = getTimeStamp();
         double now = getTimeStamp();
@@ -41,7 +41,24 @@ Micromouse::Micromouse(QWidget *parent)
         then = now;
     }
     );
-    mapTimer->start(100);
+}
+
+void Micromouse::startTimer() {
+    mapTimer.get()->start(300);
+}
+
+void Micromouse::compVsPlayer() {
+
+}
+
+void Micromouse::restart() {
+    controller.get()->resetGame();
+    mapTimer.get()->stop();
+    printScene();
+}
+
+void Micromouse::randomMaze() {
+
 }
 
 double Micromouse::getTimeStamp() {

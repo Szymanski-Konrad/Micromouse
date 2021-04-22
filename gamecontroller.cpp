@@ -3,7 +3,7 @@
 GameController::GameController()
 {   
     this->selectedAlgorythm.reset(new LeftAlgorythm());
-    this->mazeFile = "example5.txt";
+    this->mazeFile = "example4.txt";
     this->currentMaze = Maze::fromFile(mazeFile);
     this->mouse = Mouse::startPosition();
 }

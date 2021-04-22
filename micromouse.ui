@@ -14,7 +14,7 @@
    <string>Micromouse</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="startButton">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -27,10 +27,10 @@
      <string>Start</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="randomMazeButton">
     <property name="geometry">
      <rect>
-      <x>410</x>
+      <x>570</x>
       <y>50</y>
       <width>75</width>
       <height>23</height>
@@ -40,23 +40,10 @@
      <string>Losuj labirynt</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="versusButton">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>50</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Generuj labirynt</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_4">
-    <property name="geometry">
-     <rect>
-      <x>610</x>
+      <x>330</x>
       <y>50</y>
       <width>75</width>
       <height>23</height>
@@ -66,10 +53,10 @@
      <string>1 vs 1</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="restartButton">
     <property name="geometry">
      <rect>
-      <x>720</x>
+      <x>190</x>
       <y>50</y>
       <width>75</width>
       <height>23</height>
@@ -79,10 +66,10 @@
      <string>Restart</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="algorythmComboBox">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>750</x>
       <y>50</y>
       <width>151</width>
       <height>22</height>
@@ -143,7 +130,7 @@
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
