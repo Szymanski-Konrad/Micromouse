@@ -16,7 +16,6 @@ public:
     void resetGame();
     void setAlgorythm(ALGORYTHM algorythm);
     Algorythm getAlgorythm();
-    std::string getMazeFile();
     void setMazeFile(std::string mazeFile);
     Maze* getMaze();
     Mouse* getMouse();

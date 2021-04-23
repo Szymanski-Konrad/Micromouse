@@ -13,12 +13,6 @@ void RandomAlgorythm::calculateDistance(Maze &maze, Mouse &mouse) {
 
 void RandomAlgorythm::makeMove(Maze &maze, Mouse &mouse) {
     std::vector<DIRECTION> possibleDirections = maze.getTile(mouse.getX(), mouse.getY()).possibleDirections();
-//    if (possibleDirections.size() == 1) {
-//        mouse.rotateToDirection(possibleDirections.at(0));
-//        mouse.moveForward();
-//        mouse.visitTile(maze.getTile(mouse.getX(), mouse.getY()));
-//        return;
-//    }
     int secretNumber = rand() % possibleDirections.size();
     DIRECTION randomDirection = possibleDirections.at(secretNumber);
     if (randomDirection == rotateLeftMap.at(mouse.getDirection())) {

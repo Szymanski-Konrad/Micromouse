@@ -31,16 +31,11 @@ void GameController::setAlgorythm(ALGORYTHM algorythm) {
 }
 
 bool GameController::isReachEnd() {
-    //TODO: Napisać sprawdzanie czy mysz znajduje się w środku
     return this->currentMaze->isInCenter(mouse->getX(), mouse->getY());
 }
 
 Algorythm GameController::getAlgorythm() {
     return *this->selectedAlgorythm;
-}
-
-std::string GameController::getMazeFile() {
-    return this->mazeFile;
 }
 
 void GameController::setMazeFile(std::string mazeFile) {

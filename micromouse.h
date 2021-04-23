@@ -23,6 +23,8 @@ public:
     Micromouse(QWidget *parent = nullptr);
     ~Micromouse();
 
+private slots:
+    void algorythmChanged(int index);
 
 private:
     Ui::Micromouse *ui;

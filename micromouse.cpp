@@ -13,7 +13,7 @@ Micromouse::Micromouse(QWidget *parent)
     ui->algorythmComboBox->addItems({"left-side", "right-side", "random"});
     controller.reset(new GameController());
 
-    // set scenes
+    // Set scenes
     ui->userGraphicsView->setScene(mouseScene);
     ui->graphicsView->setScene(scene);
     printScene();
@@ -23,7 +23,7 @@ Micromouse::Micromouse(QWidget *parent)
     connect(ui->restartButton, &QPushButton::released, this, &Micromouse::restart);
     connect(ui->versusButton, &QPushButton::released, this, &Micromouse::compVsPlayer);
     connect(ui->randomMazeButton, &QPushButton::released, this, &Micromouse::randomMaze);
-
+    connect(ui->algorythmComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(algorythmChanged(int)));
 
     // Set the graphics loop
     double secondsPerFrame = 1.0 / 60;
@@ -51,6 +51,22 @@ void Micromouse::compVsPlayer() {
 
 }
 
+void Micromouse::algorythmChanged(int index) {
+    switch (index) {
+    case 0:
+        controller.get()->setAlgorythm(ALGORYTHM::LEFT_FIRST);
+        break;
+    case 1:
+        controller.get()->setAlgorythm(ALGORYTHM::RIGHT_FIRST);
+        break;
+    case 2:
+        controller.get()->setAlgorythm(ALGORYTHM::RANDOM);
+        break;
+    }
+
+    restart();
+}
+
 void Micromouse::restart() {
     controller.get()->resetGame();
     mapTimer.get()->stop();
@@ -58,7 +74,10 @@ void Micromouse::restart() {
 }
 
 void Micromouse::randomMaze() {
-
+    int number = rand() % 5;
+    std::string fileName = "example" + std::to_string(number + 1) + ".txt";
+    controller.get()->setMazeFile(fileName);
+    restart();
 }
 
 double Micromouse::getTimeStamp() {
