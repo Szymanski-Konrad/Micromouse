@@ -34,6 +34,18 @@ bool GameController::isReachEnd() {
     return this->currentMaze->isInCenter(mouse->getX(), mouse->getY());
 }
 
+bool GameController::isVsModeEnabled() {
+    return this->isVsMode;
+}
+
+void GameController::enableVsMode() {
+    this->isVsMode = true;
+}
+
+void GameController::disableVsMode() {
+    this->isVsMode = false;
+}
+
 Algorythm GameController::getAlgorythm() {
     return *this->selectedAlgorythm;
 }
@@ -48,6 +60,10 @@ Maze* GameController::getMaze() {
 
 Mouse* GameController::getMouse() {
     return this->mouse;
+}
+
+Mouse* GameController::getUserMouse() {
+    return this->userMouse;
 }
 
 int GameController::mouseX() {

@@ -9,6 +9,7 @@
 #include <QTimer>
 #include <QDateTime>
 #include <QMessageBox>
+#include <QKeyEvent>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Micromouse; }
@@ -31,15 +32,18 @@ private:
     QGraphicsScene *scene;
     QGraphicsScene *mouseScene;
     std::shared_ptr<GameController> controller;
+    void keyPressEvent(QKeyEvent *event);
     void printWall(DIRECTION direction, Tile tile);
     void printScene();
     void moveMouse();
     void startTimer();
     void compVsPlayer();
+    void normalMode();
     void restart();
     void randomMaze();
-    QPolygonF generateMousePolygon();
+    QPolygonF generateMousePolygon(bool isUser);
     double getTimeStamp();
     std::unique_ptr<QTimer> mapTimer;
+    bool isVsMode;
 };
 #endif // MICROMOUSE_H

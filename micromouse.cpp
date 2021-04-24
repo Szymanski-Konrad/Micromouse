@@ -9,9 +9,13 @@ Micromouse::Micromouse(QWidget *parent)
     , scene(new QGraphicsScene(this))
     , mouseScene(new QGraphicsScene(this))
 {
+    // Delcaration of inital values
     ui->setupUi(this);
     ui->algorythmComboBox->addItems({"left-side", "right-side", "random"});
     controller.reset(new GameController());
+    isVsMode = false;
+    ui->compLabel->hide();
+    ui->playerLabel->hide();
 
     // Set scenes
     ui->userGraphicsView->setScene(mouseScene);
@@ -48,7 +52,15 @@ void Micromouse::startTimer() {
 }
 
 void Micromouse::compVsPlayer() {
+    ui->playerLabel->show();
+    ui->compLabel->show();
+    controller.get()->enableVsMode();
+}
 
+void Micromouse::normalMode() {
+    ui->playerLabel->hide();
+    ui->compLabel->hide();
+    controller.get()->disableVsMode();
 }
 
 void Micromouse::algorythmChanged(int index) {
@@ -98,7 +110,8 @@ void Micromouse::printScene() {
             scene->addItem(lineItem);
         }
     }
-    scene->addPolygon(generateMousePolygon());
+
+    scene->addPolygon(generateMousePolygon(controller.get()->isVsModeEnabled()));
 
     for(auto const& tile: controller->getMouse()->getVisitedTiles()) {
         for (auto wall: tile.wallsCoords()) {
@@ -111,7 +124,24 @@ void Micromouse::printScene() {
         }
     }
 
-    mouseScene->addPolygon(generateMousePolygon());
+    mouseScene->addPolygon(generateMousePolygon(false));
+}
+
+void Micromouse::keyPressEvent(QKeyEvent *event) {
+    switch (event->key()) {
+    case Qt::Key_Left:
+        qDebug() << "left";
+        break;
+    case Qt::Key_Right:
+        qDebug() << "right";
+        break;
+    case Qt::Key_Up:
+        qDebug() << "up";
+        break;
+    case Qt::Key_Down:
+        qDebug() << "down";
+        break;
+    }
 }
 
 void Micromouse::moveMouse() {
@@ -125,7 +155,7 @@ void Micromouse::moveMouse() {
     };
 }
 
-QPolygonF Micromouse::generateMousePolygon() {
+QPolygonF Micromouse::generateMousePolygon(bool isUser) {
     QPolygonF triangle;
     Mouse* mouse = controller->getMouse();
     int x = mouse->getX();

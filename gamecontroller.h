@@ -23,12 +23,18 @@ public:
     int mouseX();
     int mouseY();
     bool isReachEnd();
+    Mouse* getUserMouse();
+    void enableVsMode();
+    void disableVsMode();
+    bool isVsModeEnabled();
 
 private:
     std::shared_ptr<Algorythm> selectedAlgorythm;
     Maze* currentMaze;
     Mouse* mouse;
+    Mouse* userMouse;
     std::string mazeFile;
+    bool isVsMode;
 };
 
 #endif // GAMECONTROLLER_H
