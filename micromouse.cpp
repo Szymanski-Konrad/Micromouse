@@ -12,6 +12,7 @@ Micromouse::Micromouse(QWidget *parent)
     // Delcaration of inital values
     ui->setupUi(this);
     ui->algorythmComboBox->addItems({"left-side", "right-side", "random"});
+    ui->algorythmComboBox->setCurrentIndex(0);
     controller.reset(new GameController());
     isVsMode = false;
     ui->compLabel->hide();
@@ -27,6 +28,7 @@ Micromouse::Micromouse(QWidget *parent)
     connect(ui->restartButton, &QPushButton::released, this, &Micromouse::restart);
     connect(ui->versusButton, &QPushButton::released, this, &Micromouse::compVsPlayer);
     connect(ui->randomMazeButton, &QPushButton::released, this, &Micromouse::randomMaze);
+    connect(ui->normalModeButton, &QPushButton::released, this, &Micromouse::normalMode);
     connect(ui->algorythmComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(algorythmChanged(int)));
 
     // Set the graphics loop
@@ -41,7 +43,13 @@ Micromouse::Micromouse(QWidget *parent)
             return;
         }
         moveMouse();
-        printScene();
+        if (!controller.get()->isVsModeEnabled()) {
+            printScene();
+        }
+        else {
+            printCompScene();
+        }
+
         then = now;
     }
     );
@@ -55,13 +63,14 @@ void Micromouse::compVsPlayer() {
     ui->playerLabel->show();
     ui->compLabel->show();
     controller.get()->enableVsMode();
-    controller.get()->resetGame();
+    restart();
 }
 
 void Micromouse::normalMode() {
     ui->playerLabel->hide();
     ui->compLabel->hide();
     controller.get()->disableVsMode();
+    restart();
 }
 
 void Micromouse::algorythmChanged(int index) {
@@ -128,6 +137,38 @@ void Micromouse::printScene() {
     mouseScene->addPolygon(generateMousePolygon(false));
 }
 
+void Micromouse::printUserScene() {
+    scene->clear();
+    QGraphicsLineItem *lineItem;
+    for(auto const& tile: controller->getMaze()->getTiles()) {
+        for (auto wall: tile.get()->wallsCoords()) {
+            lineItem = new QGraphicsLineItem(
+                        wall.getX1()*tileSize,
+                        wall.getY1()*tileSize,
+                        wall.getX2()*tileSize,
+                        wall.getY2()*tileSize);
+            scene->addItem(lineItem);
+        }
+    }
+    scene->addPolygon(generateMousePolygon(true));
+}
+
+void Micromouse::printCompScene() {
+    mouseScene->clear();
+    QGraphicsLineItem *lineItem;
+    for(auto const& tile: controller->getMouse()->getVisitedTiles()) {
+        for (auto wall: tile.get()->wallsCoords()) {
+            lineItem = new QGraphicsLineItem(
+                        wall.getX1()*tileSize,
+                        wall.getY1()*tileSize,
+                        wall.getX2()*tileSize,
+                        wall.getY2()*tileSize);
+            mouseScene->addItem(lineItem);
+        }
+    }
+    mouseScene->addPolygon(generateMousePolygon(false));
+}
+
 void Micromouse::keyPressEvent(QKeyEvent *event) {
     if (controller->isVsModeEnabled() && mapTimer.get()->isActive()) {
         switch (event->key()) {
@@ -148,6 +189,7 @@ void Micromouse::keyPressEvent(QKeyEvent *event) {
                 showWinner(true);
             break;
         }
+        printUserScene();
     }
 
 }
@@ -159,6 +201,7 @@ void Micromouse::moveMouse() {
 }
 
 void Micromouse::showWinner(bool isUser) {
+    mapTimer->stop();
     QMessageBox *winBox = new QMessageBox;
     winBox->setWindowTitle("Congratulation!!");
     winBox->setIcon(QMessageBox::Information);

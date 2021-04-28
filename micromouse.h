@@ -35,6 +35,8 @@ private:
     void keyPressEvent(QKeyEvent *event);
     void printWall(DIRECTION direction, Tile tile);
     void printScene();
+    void printUserScene();
+    void printCompScene();
     void moveMouse();
     void startTimer();
     void compVsPlayer();
