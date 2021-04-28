@@ -5,13 +5,8 @@ LeftAlgorythm::LeftAlgorythm()
 
 }
 
-
-void LeftAlgorythm::calculateDistance(Maze &maze, Mouse &mouse) {
-
-}
-
 void LeftAlgorythm::makeMove(Maze &maze, Mouse &mouse) {
-    std::vector<DIRECTION> possibleDirections = maze.getTile(mouse.getX(), mouse.getY()).possibleDirections();
+    std::vector<DIRECTION> possibleDirections = maze.getTile(mouse.getX(), mouse.getY()).get()->possibleDirections();
     DIRECTION rotateDirection = rotateLeftMap.at(mouse.getDirection());
     auto isLeftPossible = std::find_if(possibleDirections.begin(), possibleDirections.end(), [&](const DIRECTION object) {return object == rotateDirection;});
     if (isLeftPossible != possibleDirections.end()) {

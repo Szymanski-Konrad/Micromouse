@@ -55,6 +55,7 @@ void Micromouse::compVsPlayer() {
     ui->playerLabel->show();
     ui->compLabel->show();
     controller.get()->enableVsMode();
+    controller.get()->resetGame();
 }
 
 void Micromouse::normalMode() {
@@ -101,7 +102,7 @@ void Micromouse::printScene() {
     mouseScene->clear();
     QGraphicsLineItem *lineItem;
     for(auto const& tile: controller->getMaze()->getTiles()) {
-        for (auto wall: tile.wallsCoords()) {
+        for (auto wall: tile.get()->wallsCoords()) {
             lineItem = new QGraphicsLineItem(
                         wall.getX1()*tileSize,
                         wall.getY1()*tileSize,
@@ -114,7 +115,7 @@ void Micromouse::printScene() {
     scene->addPolygon(generateMousePolygon(controller.get()->isVsModeEnabled()));
 
     for(auto const& tile: controller->getMouse()->getVisitedTiles()) {
-        for (auto wall: tile.wallsCoords()) {
+        for (auto wall: tile.get()->wallsCoords()) {
             lineItem = new QGraphicsLineItem(
                         wall.getX1()*tileSize,
                         wall.getY1()*tileSize,
@@ -128,36 +129,52 @@ void Micromouse::printScene() {
 }
 
 void Micromouse::keyPressEvent(QKeyEvent *event) {
-    switch (event->key()) {
-    case Qt::Key_Left:
-        qDebug() << "left";
-        break;
-    case Qt::Key_Right:
-        qDebug() << "right";
-        break;
-    case Qt::Key_Up:
-        qDebug() << "up";
-        break;
-    case Qt::Key_Down:
-        qDebug() << "down";
-        break;
+    if (controller->isVsModeEnabled() && mapTimer.get()->isActive()) {
+        switch (event->key()) {
+        case Qt::Key_A:
+            if (controller.get()->moveUserMouse(DIRECTION::WEST))
+                showWinner(true);
+            break;
+        case Qt::Key_D:
+            if (controller.get()->moveUserMouse(DIRECTION::EAST))
+                showWinner(true);
+            break;
+        case Qt::Key_W:
+            if (controller.get()->moveUserMouse(DIRECTION::NORTH))
+                showWinner(true);
+            break;
+        case Qt::Key_S:
+            if (controller.get()->moveUserMouse(DIRECTION::SOUTH))
+                showWinner(true);
+            break;
+        }
     }
+
 }
 
 void Micromouse::moveMouse() {
     if (controller->moveMouse()) {
-        QMessageBox *winBox = new QMessageBox;
-        winBox->setWindowTitle("Congratulation!!");
-        winBox->setIcon(QMessageBox::Information);
-        winBox->setText("Mouse reach center of maze");
-        winBox->exec();
-        controller->resetGame();
+        showWinner(false);
     };
+}
+
+void Micromouse::showWinner(bool isUser) {
+    QMessageBox *winBox = new QMessageBox;
+    winBox->setWindowTitle("Congratulation!!");
+    winBox->setIcon(QMessageBox::Information);
+    if (isUser) {
+        winBox->setText("You are faster than algorythm :)");
+    }else {
+        winBox->setText("Mouse reach center of maze");
+    }
+    winBox->exec();
+    restart();
+    delete winBox;
 }
 
 QPolygonF Micromouse::generateMousePolygon(bool isUser) {
     QPolygonF triangle;
-    Mouse* mouse = controller->getMouse();
+    Mouse* mouse = isUser ? controller->getUserMouse() : controller->getMouse();
     int x = mouse->getX();
     int y = mouse->getY();
 

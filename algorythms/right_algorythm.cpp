@@ -5,12 +5,8 @@ RightAlgorythm::RightAlgorythm()
 
 }
 
-void RightAlgorythm::calculateDistance(Maze &maze, Mouse &mouse) {
-
-}
-
 void RightAlgorythm::makeMove(Maze &maze, Mouse &mouse) {
-    std::vector<DIRECTION> possibleDirections = maze.getTile(mouse.getX(), mouse.getY()).possibleDirections();
+    std::vector<DIRECTION> possibleDirections = maze.getTile(mouse.getX(), mouse.getY()).get()->possibleDirections();
     DIRECTION rotateDirection = rotateRightMap.at(mouse.getDirection());
     auto isRightPossible = std::find_if(possibleDirections.begin(), possibleDirections.end(), [rotateDirection](DIRECTION object){ return object == rotateDirection;});
     if (isRightPossible != possibleDirections.end()) {

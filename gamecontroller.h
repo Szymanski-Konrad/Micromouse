@@ -22,8 +22,9 @@ public:
     bool moveMouse();
     int mouseX();
     int mouseY();
-    bool isReachEnd();
+    bool isReachEnd(bool isUser);
     Mouse* getUserMouse();
+    bool moveUserMouse(DIRECTION direction);
     void enableVsMode();
     void disableVsMode();
     bool isVsModeEnabled();

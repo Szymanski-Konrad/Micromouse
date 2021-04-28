@@ -7,7 +7,6 @@ class LeftAlgorythm : public Algorythm {
 
 public:
     LeftAlgorythm();
-    void calculateDistance(Maze& maze, Mouse& mouse);
     void makeMove(Maze& maze, Mouse& mouse);
 };
 

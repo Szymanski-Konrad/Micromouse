@@ -7,7 +7,6 @@ class RandomAlgorythm : public Algorythm
 {
 public:
     RandomAlgorythm();
-    void calculateDistance(Maze& maze, Mouse& mouse);
     void makeMove(Maze& maze, Mouse& mouse);
 };
 

@@ -40,6 +40,7 @@ private:
     void compVsPlayer();
     void normalMode();
     void restart();
+    void showWinner(bool isUser);
     void randomMaze();
     QPolygonF generateMousePolygon(bool isUser);
     double getTimeStamp();

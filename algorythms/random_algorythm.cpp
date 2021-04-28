@@ -7,12 +7,8 @@ RandomAlgorythm::RandomAlgorythm()
 
 }
 
-void RandomAlgorythm::calculateDistance(Maze &maze, Mouse &mouse) {
-
-}
-
 void RandomAlgorythm::makeMove(Maze &maze, Mouse &mouse) {
-    std::vector<DIRECTION> possibleDirections = maze.getTile(mouse.getX(), mouse.getY()).possibleDirections();
+    std::vector<DIRECTION> possibleDirections = maze.getTile(mouse.getX(), mouse.getY()).get()->possibleDirections();
     int secretNumber = rand() % possibleDirections.size();
     DIRECTION randomDirection = possibleDirections.at(secretNumber);
     if (randomDirection == rotateLeftMap.at(mouse.getDirection())) {

@@ -6,8 +6,8 @@ Maze::Maze() {
 
 Maze::Maze(std::vector<std::vector<int>> tiles) {
     for (auto const& tile: tiles) {
-        std::unique_ptr<Tile> tmp(new Tile(tile));
-        this->tiles.push_back(*tmp);
+        std::shared_ptr<Tile> tmp(new Tile(tile));
+        this->tiles.push_back(tmp);
     }
 }
 
@@ -45,13 +45,13 @@ int Maze::getWidth() const {
     return std::sqrt(tiles.size());
 }
 
-std::vector<Tile> Maze::getTiles() const {
+std::vector<std::shared_ptr<Tile>> Maze::getTiles() const {
     return tiles;
 }
 
-Tile Maze::getTile(int x, int y) const {
-    auto tile = *std::find_if(tiles.begin(), tiles.end(), [&](const Tile& obj) { return obj.getX() == x && obj.getY() == y; });
-    return tile;
+std::shared_ptr<Tile> Maze::getTile(int x, int y) const {
+    auto tile = std::find_if(tiles.begin(), tiles.end(), [&](const std::shared_ptr<Tile>& obj) { return obj.get()->getX() == x && obj.get()->getY() == y; });
+    return *tile;
 }
 
 bool Maze::isInCenter(int x, int y) {

@@ -6,14 +6,15 @@ Mouse::Mouse()
 
 }
 
-Mouse::Mouse(int x, int y) {
+Mouse::Mouse(int x, int y, std::shared_ptr<Tile> tile) {
     this->x = x;
     this->y = y;
     this->moveDirection = DIRECTION::SOUTH;
+    this->visitTile(tile);
 }
 
-Mouse* Mouse::startPosition() {
-    return new Mouse(0, 0);
+Mouse* Mouse::startPosition(std::shared_ptr<Tile> tile) {
+    return new Mouse(0, 0, tile);
 }
 
 void Mouse::turnBack() {
@@ -56,13 +57,23 @@ void Mouse::moveForward() {
     }
 }
 
-void Mouse::visitTile(Tile tile) {
-    //TODO: Dodawać tylko nowe pola;
-    this->visitedTiles.insert(tile);
+void Mouse::visitTile(std::shared_ptr<Tile> tile) {
+    auto isAlreadyVisited = std::find_if(this->visitedTiles.begin(), this->visitedTiles.end(), [tile](std::shared_ptr<Tile> object){ return object.get()->getX() == tile->getX() && object.get()->getY() == tile->getY();});
+    if (isAlreadyVisited == this->visitedTiles.end()) {
+        this->visitedTiles.insert(tile);
+    }
+    this->currentTile = tile;
 }
 
-std::vector<Tile> Mouse::getVisitedTiles() {
-    std::vector<Tile> tiles;
+std::vector<std::shared_ptr<Tile>> Mouse::getVisitedTiles() {
+    std::vector<std::shared_ptr<Tile>> tiles;
     tiles.assign(visitedTiles.begin(), visitedTiles.end());
     return tiles;
+}
+
+bool Mouse::canMove() {
+    DIRECTION direction = this->moveDirection;
+    std::vector<DIRECTION> directions = this->currentTile.get()->possibleDirections();
+    auto canMove = std::find_if(directions.begin(), directions.end(), [direction](DIRECTION object){ return object == direction;});
+    return canMove != directions.end();
 }

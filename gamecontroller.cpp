@@ -5,12 +5,17 @@ GameController::GameController()
     this->selectedAlgorythm.reset(new LeftAlgorythm());
     this->mazeFile = "example4.txt";
     this->currentMaze = Maze::fromFile(mazeFile);
-    this->mouse = Mouse::startPosition();
+    std::shared_ptr<Tile> tile = this->currentMaze->getTile(0,0);
+    this->mouse = Mouse::startPosition(tile);
+    this->userMouse = Mouse::startPosition(tile);
+    this->isVsMode = false;
 }
 
 void GameController::resetGame() {
-    this->mouse = Mouse::startPosition();
     this->currentMaze = Maze::fromFile(mazeFile);
+    std::shared_ptr<Tile> tile = this->currentMaze->getTile(0,0);
+    this->mouse = Mouse::startPosition(tile);
+    this->userMouse = Mouse::startPosition(tile);
 }
 
 void GameController::setAlgorythm(ALGORYTHM algorythm) {
@@ -30,7 +35,9 @@ void GameController::setAlgorythm(ALGORYTHM algorythm) {
     }
 }
 
-bool GameController::isReachEnd() {
+bool GameController::isReachEnd(bool isUser = false) {
+    if (isUser)
+        return this->currentMaze->isInCenter(userMouse->getX(), userMouse->getY());
     return this->currentMaze->isInCenter(mouse->getX(), mouse->getY());
 }
 
@@ -77,6 +84,16 @@ int GameController::mouseY() {
 bool GameController::moveMouse() {
     this->selectedAlgorythm.get()->makeMove(*this->currentMaze, *this->mouse);
     return isReachEnd();
+}
+
+bool GameController::moveUserMouse(DIRECTION direction) {
+    userMouse->rotateToDirection(direction);
+    if (this->userMouse->canMove()) {
+        userMouse->moveForward();
+        userMouse->visitTile(this->currentMaze->getTile(userMouse->getX(), userMouse->getY()));
+        return isReachEnd(true);
+    }
+    return false;
 }
 
 

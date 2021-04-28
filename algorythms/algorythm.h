@@ -17,7 +17,6 @@ class Algorythm
 {
 public:
     Algorythm();
-    virtual void calculateDistance(Maze& maze, Mouse& mouse) { };
     virtual void makeMove(Maze& maze, Mouse& mouse) { };
     ~Algorythm() {};
 };
