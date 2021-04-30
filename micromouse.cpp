@@ -62,6 +62,8 @@ void Micromouse::startTimer() {
 void Micromouse::compVsPlayer() {
     ui->playerLabel->show();
     ui->compLabel->show();
+    ui->userMovesLabel->show();
+    ui->userMovesLabel->setText(controller.get()->getUserMouse()->getNumberOfMoves().c_str());
     controller.get()->enableVsMode();
     restart();
 }
@@ -69,6 +71,7 @@ void Micromouse::compVsPlayer() {
 void Micromouse::normalMode() {
     ui->playerLabel->hide();
     ui->compLabel->hide();
+    ui->userMovesLabel->hide();
     controller.get()->disableVsMode();
     restart();
 }
@@ -133,7 +136,7 @@ void Micromouse::printScene() {
             mouseScene->addItem(lineItem);
         }
     }
-
+    ui->compMovesLabel->setText(controller->getMouse()->getNumberOfMoves().c_str());
     mouseScene->addPolygon(generateMousePolygon(false));
 }
 
@@ -150,6 +153,7 @@ void Micromouse::printUserScene() {
             scene->addItem(lineItem);
         }
     }
+    ui->userMovesLabel->setText(controller->getUserMouse()->getNumberOfMoves().c_str());
     scene->addPolygon(generateMousePolygon(true));
 }
 
@@ -166,6 +170,7 @@ void Micromouse::printCompScene() {
             mouseScene->addItem(lineItem);
         }
     }
+    ui->compMovesLabel->setText(controller->getMouse()->getNumberOfMoves().c_str());
     mouseScene->addPolygon(generateMousePolygon(false));
 }
 

@@ -24,9 +24,11 @@ public:
     void visitTile(std::shared_ptr<Tile> tile);
     std::vector<std::shared_ptr<Tile>> getVisitedTiles();
     bool canMove();
+    std::string getNumberOfMoves();
 private:
     int x;
     int y;
+    int moves;
     DIRECTION moveDirection;
     std::set<std::shared_ptr<Tile>> visitedTiles;
     std::shared_ptr<Tile> currentTile;

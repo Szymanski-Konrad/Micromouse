@@ -87,7 +87,8 @@ bool GameController::moveMouse() {
 }
 
 bool GameController::moveUserMouse(DIRECTION direction) {
-    userMouse->rotateToDirection(direction);
+    if (userMouse->getDirection() != direction)
+        userMouse->rotateToDirection(direction);
     if (this->userMouse->canMove()) {
         userMouse->moveForward();
         userMouse->visitTile(this->currentMaze->getTile(userMouse->getX(), userMouse->getY()));

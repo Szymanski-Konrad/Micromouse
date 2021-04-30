@@ -11,21 +11,26 @@ Mouse::Mouse(int x, int y, std::shared_ptr<Tile> tile) {
     this->y = y;
     this->moveDirection = DIRECTION::SOUTH;
     this->visitTile(tile);
+    this->moves = 0;
 }
+
 
 Mouse* Mouse::startPosition(std::shared_ptr<Tile> tile) {
     return new Mouse(0, 0, tile);
 }
 
 void Mouse::turnBack() {
+    this->moves += 1;
     this->moveDirection = rotateBackMap.at(this->moveDirection);
 }
 
 void Mouse::rotateRight() {
+    this->moves += 1;
     this->moveDirection = rotateRightMap.at(this->moveDirection);
 }
 
 void Mouse::rotateLeft() {
+    this->moves += 1;
     this->moveDirection = rotateLeftMap.at(this->moveDirection);
 }
 
@@ -33,7 +38,12 @@ DIRECTION Mouse::getDirection() {
     return this->moveDirection;
 }
 
+std::string Mouse::getNumberOfMoves() {
+    return "Moves: " + std::to_string(this->moves);
+}
+
 void Mouse::rotateToDirection(DIRECTION direction) {
+    this->moves += 1;
     this->moveDirection = direction;
 }
 
@@ -46,6 +56,7 @@ int Mouse::getY() {
 }
 
 void Mouse::moveForward() {
+    this->moves += 1;
     if (moveDirection == DIRECTION::NORTH) {
         this->y -= 1;
     } else if (moveDirection == DIRECTION::SOUTH) {
