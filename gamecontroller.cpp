@@ -29,9 +29,6 @@ void GameController::setAlgorythm(ALGORYTHM algorythm) {
     case ALGORYTHM::RANDOM:
         this->selectedAlgorythm.reset(new RandomAlgorythm());
         break;
-    case ALGORYTHM::FLOOD_FILL:
-        this->selectedAlgorythm.reset(new FloodFillAlgorythm());
-        break;
     }
 }
 

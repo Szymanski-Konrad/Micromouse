@@ -6,18 +6,34 @@
 #include "direction.h"
 #include "algorithm"
 
+/**
+*  @file algorythm.h
+*  @brief Algorythm abstraction
+*/
+
+/// @brief Algorythms enum
 enum class ALGORYTHM {
-  RIGHT_FIRST,
-  LEFT_FIRST,
-  FLOOD_FILL,
-  RANDOM,
+    /// Right wall first algorythm
+    RIGHT_FIRST,
+    /// Left wall first algorythm
+    LEFT_FIRST,
+    /// Random direction algorythm
+    RANDOM,
 };
 
 class Algorythm
 {
 public:
+    /// @brief Default constructor
     Algorythm();
+
+    /// @brief Deciding mouse moving
+    /// @details Function check which directions are possible for mouse and choose best way depends on selected algorythm
+    /// @param maze Current loaded maze
+    /// @param moving mouse
     virtual void makeMove(Maze& maze, Mouse& mouse) { };
+
+    /// @brief Class destructor
     ~Algorythm() {};
 };
 

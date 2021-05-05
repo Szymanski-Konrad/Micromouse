@@ -5,10 +5,6 @@ Wall::Wall()
 
 }
 
-Wall::Wall(int x1, int y1, int x2, int y2) : x1(x1), x2(x2), y1(y1), y2(y2) {
-
-}
-
 Wall::Wall(int x, int y, DIRECTION direction) {
     switch (direction) {
     case DIRECTION::NORTH:

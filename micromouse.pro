@@ -10,7 +10,6 @@ CONFIG += c++11
 
 SOURCES += \
     algorythms/algorythm.cpp \
-    algorythms/flood_fill_algorythm.cpp \
     algorythms/left_algorythm.cpp \
     algorythms/random_algorythm.cpp \
     algorythms/right_algorythm.cpp \
@@ -25,7 +24,6 @@ SOURCES += \
 
 HEADERS += \
     algorythms/algorythm.h \
-    algorythms/flood_fill_algorythm.h \
     algorythms/left_algorythm.h \
     algorythms/random_algorythm.h \
     algorythms/right_algorythm.h \

@@ -5,20 +5,24 @@
 #include <map>
 #include <string>
 
+/**
+*  @file direction.h
+*  @brief Direction enum
+*/
+
+/// @brief Possible directions in maze
 enum class DIRECTION {
+    /// North direction
     NORTH,
+    /// East direction
     EAST,
+    /// South direction
     SOUTH,
+    /// West direction
     WEST,
 };
 
-const std::map<char, DIRECTION> charDirection = {
-    {'n', DIRECTION::NORTH},
-    {'e', DIRECTION::EAST},
-    {'s', DIRECTION::SOUTH},
-    {'w', DIRECTION::WEST},
-};
-
+/// @brief Translate direction when rotate right
 const std::map<DIRECTION, DIRECTION> rotateLeftMap = {
     {DIRECTION::NORTH, DIRECTION::WEST},
     {DIRECTION::EAST, DIRECTION::NORTH},
@@ -26,6 +30,7 @@ const std::map<DIRECTION, DIRECTION> rotateLeftMap = {
     {DIRECTION::WEST, DIRECTION::SOUTH},
 };
 
+/// @brief Translate direction when rotate right
 const std::map<DIRECTION, DIRECTION> rotateRightMap = {
     {DIRECTION::NORTH, DIRECTION::EAST},
     {DIRECTION::EAST, DIRECTION::SOUTH},
@@ -33,28 +38,12 @@ const std::map<DIRECTION, DIRECTION> rotateRightMap = {
     {DIRECTION::WEST, DIRECTION::NORTH},
 };
 
+/// @brief Translate direction when rotate back
 const std::map<DIRECTION, DIRECTION> rotateBackMap = {
     {DIRECTION::NORTH, DIRECTION::SOUTH},
     {DIRECTION::EAST, DIRECTION::WEST},
     {DIRECTION::SOUTH, DIRECTION::NORTH},
     {DIRECTION::WEST, DIRECTION::EAST},
-};
-
-class Direction
-{
-public:
-
-    Direction();
-    Direction(DIRECTION direction);
-
-    void rotateLeft();
-    void rotateRight();
-    DIRECTION getDirection() const;
-
-    DIRECTION charToDirection(char c);
-private:
-
-    DIRECTION currentDirection;
 };
 
 #endif // DIRECTION_H
