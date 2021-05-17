@@ -1,0 +1,235 @@
+\hypertarget{class_game_controller}{}\doxysection{Game\+Controller Class Reference}
+\label{class_game_controller}\index{GameController@{GameController}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_controller_a7d72ff3f639acb68578e20fee3649b42}\label{class_game_controller_a7d72ff3f639acb68578e20fee3649b42}} 
+\mbox{\hyperlink{class_game_controller_a7d72ff3f639acb68578e20fee3649b42}{Game\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_controller_a466726ab5ccac77661d81925be5ea5ff}{reset\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Reset state of game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_controller_a9e368d260b7629a80d272c91bf703d99}{set\+Algorythm}} (ALGORYTHM algorythm)
+\begin{DoxyCompactList}\small\item\em Set selected algorythm. \end{DoxyCompactList}\item 
+Algorythm \mbox{\hyperlink{class_game_controller_a169e473af105579cde4397ae11f893a5}{get\+Algorythm}} ()
+\begin{DoxyCompactList}\small\item\em get current algorythm \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_controller_a66b72c592b94e5aa510d6a227055ef73}{set\+Maze\+File}} (std\+::string maze\+File)
+\begin{DoxyCompactList}\small\item\em set maze source file \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_maze}{Maze}} $\ast$ \mbox{\hyperlink{class_game_controller_afa3cb136035996470d33992e884abc6e}{get\+Maze}} ()
+\begin{DoxyCompactList}\small\item\em get current maze \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mouse}{Mouse}} $\ast$ \mbox{\hyperlink{class_game_controller_aafe05a468328beaafa031222a02be2ae}{get\+Mouse}} ()
+\begin{DoxyCompactList}\small\item\em get algorythm mouse \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_controller_a0218aaa59d27fd27a927a1af94bbe523}\label{class_game_controller_a0218aaa59d27fd27a927a1af94bbe523}} 
+bool \mbox{\hyperlink{class_game_controller_a0218aaa59d27fd27a927a1af94bbe523}{move\+Mouse}} ()
+\begin{DoxyCompactList}\small\item\em move algorythm mouse \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_controller_ac18dc5e76541225e4ee6beda7697d412}{mouseX}} ()
+\begin{DoxyCompactList}\small\item\em get algorythm mouse X position \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_controller_a525534ef4ee834171884ee0b5b06aa54}{mouseY}} ()
+\begin{DoxyCompactList}\small\item\em get algorythm mouse Y position \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_controller_ada914f2fe97f9b28f4b8653d9eb652cf}{is\+Reach\+End}} (bool is\+User)
+\begin{DoxyCompactList}\small\item\em check if mouse reach center of maze \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mouse}{Mouse}} $\ast$ \mbox{\hyperlink{class_game_controller_a627e284bed526991d9a2bf7498080333}{get\+User\+Mouse}} ()
+\begin{DoxyCompactList}\small\item\em get user mouse \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_controller_a25f94744c869e741a5ef7e450cebfba3}{move\+User\+Mouse}} (\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}} direction)
+\begin{DoxyCompactList}\small\item\em move user mouse \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_controller_a4122d2b81bbb0cc5a231906a7c0e4651}\label{class_game_controller_a4122d2b81bbb0cc5a231906a7c0e4651}} 
+void \mbox{\hyperlink{class_game_controller_a4122d2b81bbb0cc5a231906a7c0e4651}{enable\+Vs\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em switch to player vs algoryth mode \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_controller_a534b3e05298d4e257bed4d30cbab53b0}\label{class_game_controller_a534b3e05298d4e257bed4d30cbab53b0}} 
+void \mbox{\hyperlink{class_game_controller_a534b3e05298d4e257bed4d30cbab53b0}{disable\+Vs\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em switch to algorytm mode \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_controller_a9428f134b4e450a1e513275b83917576}{is\+Vs\+Mode\+Enabled}} ()
+\begin{DoxyCompactList}\small\item\em check if player vs algorythm mode is enabled \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_controller_ae89e1f2d9878d950e918435b1a634b69}\label{class_game_controller_ae89e1f2d9878d950e918435b1a634b69}} 
+void \mbox{\hyperlink{class_game_controller_ae89e1f2d9878d950e918435b1a634b69}{set\+Speed}} (int value)
+\begin{DoxyCompactList}\small\item\em Set new speed of algorythm. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_controller_ae91d579e73a09917e947cbb97df2a80f}{get\+Speed}} ()
+\begin{DoxyCompactList}\small\item\em Get speed of algorythm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_controller_a169e473af105579cde4397ae11f893a5}\label{class_game_controller_a169e473af105579cde4397ae11f893a5}} 
+\index{GameController@{GameController}!getAlgorythm@{getAlgorythm}}
+\index{getAlgorythm@{getAlgorythm}!GameController@{GameController}}
+\doxysubsubsection{\texorpdfstring{getAlgorythm()}{getAlgorythm()}}
+{\footnotesize\ttfamily Algorythm Game\+Controller\+::get\+Algorythm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get current algorythm 
+
+\begin{DoxyReturn}{Returns}
+current algorythm 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_controller_afa3cb136035996470d33992e884abc6e}\label{class_game_controller_afa3cb136035996470d33992e884abc6e}} 
+\index{GameController@{GameController}!getMaze@{getMaze}}
+\index{getMaze@{getMaze}!GameController@{GameController}}
+\doxysubsubsection{\texorpdfstring{getMaze()}{getMaze()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_maze}{Maze}} $\ast$ Game\+Controller\+::get\+Maze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get current maze 
+
+\begin{DoxyReturn}{Returns}
+curret maze 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_controller_aafe05a468328beaafa031222a02be2ae}\label{class_game_controller_aafe05a468328beaafa031222a02be2ae}} 
+\index{GameController@{GameController}!getMouse@{getMouse}}
+\index{getMouse@{getMouse}!GameController@{GameController}}
+\doxysubsubsection{\texorpdfstring{getMouse()}{getMouse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mouse}{Mouse}} $\ast$ Game\+Controller\+::get\+Mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get algorythm mouse 
+
+\begin{DoxyReturn}{Returns}
+algorythm mouse 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_controller_ae91d579e73a09917e947cbb97df2a80f}\label{class_game_controller_ae91d579e73a09917e947cbb97df2a80f}} 
+\index{GameController@{GameController}!getSpeed@{getSpeed}}
+\index{getSpeed@{getSpeed}!GameController@{GameController}}
+\doxysubsubsection{\texorpdfstring{getSpeed()}{getSpeed()}}
+{\footnotesize\ttfamily int Game\+Controller\+::get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get speed of algorythm. 
+
+\begin{DoxyReturn}{Returns}
+Algorythm speed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_controller_a627e284bed526991d9a2bf7498080333}\label{class_game_controller_a627e284bed526991d9a2bf7498080333}} 
+\index{GameController@{GameController}!getUserMouse@{getUserMouse}}
+\index{getUserMouse@{getUserMouse}!GameController@{GameController}}
+\doxysubsubsection{\texorpdfstring{getUserMouse()}{getUserMouse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mouse}{Mouse}} $\ast$ Game\+Controller\+::get\+User\+Mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get user mouse 
+
+\begin{DoxyReturn}{Returns}
+user mouse 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_controller_ada914f2fe97f9b28f4b8653d9eb652cf}\label{class_game_controller_ada914f2fe97f9b28f4b8653d9eb652cf}} 
+\index{GameController@{GameController}!isReachEnd@{isReachEnd}}
+\index{isReachEnd@{isReachEnd}!GameController@{GameController}}
+\doxysubsubsection{\texorpdfstring{isReachEnd()}{isReachEnd()}}
+{\footnotesize\ttfamily bool Game\+Controller\+::is\+Reach\+End (\begin{DoxyParamCaption}\item[{bool}]{is\+User = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+check if mouse reach center of maze 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+User} & boolean value determine user or algorythm mouse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean value whether reach center or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_controller_a9428f134b4e450a1e513275b83917576}\label{class_game_controller_a9428f134b4e450a1e513275b83917576}} 
+\index{GameController@{GameController}!isVsModeEnabled@{isVsModeEnabled}}
+\index{isVsModeEnabled@{isVsModeEnabled}!GameController@{GameController}}
+\doxysubsubsection{\texorpdfstring{isVsModeEnabled()}{isVsModeEnabled()}}
+{\footnotesize\ttfamily bool Game\+Controller\+::is\+Vs\+Mode\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+check if player vs algorythm mode is enabled 
+
+\begin{DoxyReturn}{Returns}
+boolean value wheter vs mode is enabled or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_controller_ac18dc5e76541225e4ee6beda7697d412}\label{class_game_controller_ac18dc5e76541225e4ee6beda7697d412}} 
+\index{GameController@{GameController}!mouseX@{mouseX}}
+\index{mouseX@{mouseX}!GameController@{GameController}}
+\doxysubsubsection{\texorpdfstring{mouseX()}{mouseX()}}
+{\footnotesize\ttfamily int Game\+Controller\+::mouseX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get algorythm mouse X position 
+
+\begin{DoxyReturn}{Returns}
+algorythm mouse X position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_controller_a525534ef4ee834171884ee0b5b06aa54}\label{class_game_controller_a525534ef4ee834171884ee0b5b06aa54}} 
+\index{GameController@{GameController}!mouseY@{mouseY}}
+\index{mouseY@{mouseY}!GameController@{GameController}}
+\doxysubsubsection{\texorpdfstring{mouseY()}{mouseY()}}
+{\footnotesize\ttfamily int Game\+Controller\+::mouseY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get algorythm mouse Y position 
+
+\begin{DoxyReturn}{Returns}
+algorythm mouse Y position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_controller_a25f94744c869e741a5ef7e450cebfba3}\label{class_game_controller_a25f94744c869e741a5ef7e450cebfba3}} 
+\index{GameController@{GameController}!moveUserMouse@{moveUserMouse}}
+\index{moveUserMouse@{moveUserMouse}!GameController@{GameController}}
+\doxysubsubsection{\texorpdfstring{moveUserMouse()}{moveUserMouse()}}
+{\footnotesize\ttfamily bool Game\+Controller\+::move\+User\+Mouse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}}}]{direction }\end{DoxyParamCaption})}
+
+
+
+move user mouse 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & move direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean value if can move to direction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_controller_a466726ab5ccac77661d81925be5ea5ff}\label{class_game_controller_a466726ab5ccac77661d81925be5ea5ff}} 
+\index{GameController@{GameController}!resetGame@{resetGame}}
+\index{resetGame@{resetGame}!GameController@{GameController}}
+\doxysubsubsection{\texorpdfstring{resetGame()}{resetGame()}}
+{\footnotesize\ttfamily void Game\+Controller\+::reset\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset state of game. 
+
+move mouses back and print starting state \mbox{\Hypertarget{class_game_controller_a9e368d260b7629a80d272c91bf703d99}\label{class_game_controller_a9e368d260b7629a80d272c91bf703d99}} 
+\index{GameController@{GameController}!setAlgorythm@{setAlgorythm}}
+\index{setAlgorythm@{setAlgorythm}!GameController@{GameController}}
+\doxysubsubsection{\texorpdfstring{setAlgorythm()}{setAlgorythm()}}
+{\footnotesize\ttfamily void Game\+Controller\+::set\+Algorythm (\begin{DoxyParamCaption}\item[{ALGORYTHM}]{algorythm }\end{DoxyParamCaption})}
+
+
+
+Set selected algorythm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em algorythm} & selected algorythm \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_controller_a66b72c592b94e5aa510d6a227055ef73}\label{class_game_controller_a66b72c592b94e5aa510d6a227055ef73}} 
+\index{GameController@{GameController}!setMazeFile@{setMazeFile}}
+\index{setMazeFile@{setMazeFile}!GameController@{GameController}}
+\doxysubsubsection{\texorpdfstring{setMazeFile()}{setMazeFile()}}
+{\footnotesize\ttfamily void Game\+Controller\+::set\+Maze\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{maze\+File }\end{DoxyParamCaption})}
+
+
+
+set maze source file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em maze\+File} & file name \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gamecontroller_8h}{gamecontroller.\+h}}\item 
+gamecontroller.\+cpp\end{DoxyCompactItemize}

@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['operator_3c_62',['operator&lt;',['../class_tile.html#ab0656a5470f4c71c90727f1965a8a2f2',1,'Tile']]]
+  ['possibledirections_58',['possibleDirections',['../class_tile.html#acf485dfd1307c2b7dfbe5bfa9bbea2dc',1,'Tile']]],
+  ['printcompscene_59',['printCompScene',['../class_micromouse.html#a99a3f4751040aa46aa07f4f4b727ca39',1,'Micromouse']]],
+  ['printscene_60',['printScene',['../class_micromouse.html#a9fdf64d6647526a72e49ef5ed74c6e91',1,'Micromouse']]],
+  ['printuserscene_61',['printUserScene',['../class_micromouse.html#a7a158ccc1ed55a0f017506e784d07d7f',1,'Micromouse']]],
+  ['printwall_62',['printWall',['../class_micromouse.html#a223e9efb876ed08c8e5047155fb86866',1,'Micromouse']]]
 ];

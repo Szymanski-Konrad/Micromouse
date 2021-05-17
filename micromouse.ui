@@ -27,19 +27,6 @@
      <string>Start</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="randomMazeButton">
-    <property name="geometry">
-     <rect>
-      <x>590</x>
-      <y>50</y>
-      <width>101</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Losuj labirynt</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="versusButton">
     <property name="geometry">
      <rect>
@@ -240,6 +227,92 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="mazeComboBox">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>50</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>10</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Wybór labiryntu</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="speedSlider">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>550</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>50</number>
+    </property>
+    <property name="maximum">
+     <number>500</number>
+    </property>
+    <property name="singleStep">
+     <number>50</number>
+    </property>
+    <property name="pageStep">
+     <number>50</number>
+    </property>
+    <property name="tracking">
+     <bool>true</bool>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksBothSides</enum>
+    </property>
+    <property name="tickInterval">
+     <number>50</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>550</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Prędkość algorytmu:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="speedLabel">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>550</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>50</string>
     </property>
    </widget>
   </widget>

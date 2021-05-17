@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['algorythm_101',['Algorythm',['../class_algorythm.html',1,'']]]
+  ['gamecontroller_90',['GameController',['../class_game_controller.html',1,'']]]
 ];

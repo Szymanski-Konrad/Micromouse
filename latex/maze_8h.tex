@@ -1,0 +1,70 @@
+\hypertarget{maze_8h}{}\doxysection{maze.\+h File Reference}
+\label{maze_8h}\index{maze.h@{maze.h}}
+
+
+Field with walls, where mouse can move around.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$tile.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$QDebug$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_interval}{Interval$<$ T $>$}}
+\item 
+class \mbox{\hyperlink{class_maze}{Maze}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_interval}{Interval}}$<$ T $>$ \mbox{\hyperlink{maze_8h_abc2307895bb6ad4bc990bdfbbbb0df8e}{interval}} (T lo, T hi)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_interval}{Interval}} template to get maze middle tiles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{maze_8h_aae35f5b3069febaeb64dbcab8d689da9}\label{maze_8h_aae35f5b3069febaeb64dbcab8d689da9}} 
+const int {\bfseries low\+Middle} = 7
+\item 
+\mbox{\Hypertarget{maze_8h_a34ed3ce9fda014cc69893a5007aa713c}\label{maze_8h_a34ed3ce9fda014cc69893a5007aa713c}} 
+const int {\bfseries hight\+Middle} = 8
+\item 
+\mbox{\Hypertarget{maze_8h_ae9622f4fa3d3d6e68915169066f148af}\label{maze_8h_ae9622f4fa3d3d6e68915169066f148af}} 
+const \mbox{\hyperlink{class_interval}{Interval}}$<$ int $>$ {\bfseries in\+Range} = \mbox{\hyperlink{class_interval}{Interval}}$<$int$>$(low\+Middle, hight\+Middle)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Field with walls, where mouse can move around. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{maze_8h_abc2307895bb6ad4bc990bdfbbbb0df8e}\label{maze_8h_abc2307895bb6ad4bc990bdfbbbb0df8e}} 
+\index{maze.h@{maze.h}!interval@{interval}}
+\index{interval@{interval}!maze.h@{maze.h}}
+\doxysubsubsection{\texorpdfstring{interval()}{interval()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_interval}{Interval}}$<$T$>$ interval (\begin{DoxyParamCaption}\item[{T}]{lo,  }\item[{T}]{hi }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_interval}{Interval}} template to get maze middle tiles. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & interval start or end numeric type as int, float, double \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em lo} & lowest value in interval \\
+\hline
+{\em hi} & highest value in interval \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+values in range $<$lo, hi$>$ 
+\end{DoxyReturn}

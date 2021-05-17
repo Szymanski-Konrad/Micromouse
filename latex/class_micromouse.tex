@@ -1,0 +1,216 @@
+\hypertarget{class_micromouse}{}\doxysection{Micromouse Class Reference}
+\label{class_micromouse}\index{Micromouse@{Micromouse}}
+Inheritance diagram for Micromouse\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_micromouse}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_micromouse_a7f6a50575565114004a64ebe920c845c}\label{class_micromouse_a7f6a50575565114004a64ebe920c845c}} 
+void \mbox{\hyperlink{class_micromouse_a7f6a50575565114004a64ebe920c845c}{algorythm\+Changed}} (int index)
+\begin{DoxyCompactList}\small\item\em Function for Combobox for selecting algorythm from list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_micromouse_a86fb1bb2921303cd7b91bfb7b6235923}\label{class_micromouse_a86fb1bb2921303cd7b91bfb7b6235923}} 
+void \mbox{\hyperlink{class_micromouse_a86fb1bb2921303cd7b91bfb7b6235923}{maze\+Changed}} (int index)
+\begin{DoxyCompactList}\small\item\em Function for Combobox for selecting maze from list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_micromouse_aac569e7aaff6069d5ad639ebd31fa2c9}\label{class_micromouse_aac569e7aaff6069d5ad639ebd31fa2c9}} 
+void \mbox{\hyperlink{class_micromouse_aac569e7aaff6069d5ad639ebd31fa2c9}{speed\+Changed}} (int value)
+\begin{DoxyCompactList}\small\item\em Function for slider to change speed of algorythm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_micromouse_aa59bf6eff666ebe71595bf677596f3de}\label{class_micromouse_aa59bf6eff666ebe71595bf677596f3de}} 
+\mbox{\hyperlink{class_micromouse_aa59bf6eff666ebe71595bf677596f3de}{Micromouse}} (QWidget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_micromouse_ada0402a1b680da1df94d1431d65a0cf3}\label{class_micromouse_ada0402a1b680da1df94d1431d65a0cf3}} 
+\mbox{\hyperlink{class_micromouse_ada0402a1b680da1df94d1431d65a0cf3}{$\sim$\+Micromouse}} ()
+\begin{DoxyCompactList}\small\item\em Class destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_micromouse_aa5ff2e30e4571ba045f3df782e4907db}{key\+Press\+Event}} (QKey\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em React on key pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_micromouse_a223e9efb876ed08c8e5047155fb86866}{print\+Wall}} (\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}} direction, \mbox{\hyperlink{class_tile}{Tile}} tile)
+\begin{DoxyCompactList}\small\item\em Print wall on direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_micromouse_a9fdf64d6647526a72e49ef5ed74c6e91}{print\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em Print scene of loaded maze. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_micromouse_a7a158ccc1ed55a0f017506e784d07d7f}{print\+User\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em Print loaded maze with user mouse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_micromouse_a99a3f4751040aa46aa07f4f4b727ca39}{print\+Comp\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em Print loaded maze with algorythm mouse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_micromouse_a711ecb4512c55a299ec84a4d20a3d5b7}{move\+Mouse}} ()
+\begin{DoxyCompactList}\small\item\em Move mouse in possible direction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_micromouse_a370ed01aeef173fa526508525155ac1c}\label{class_micromouse_a370ed01aeef173fa526508525155ac1c}} 
+void \mbox{\hyperlink{class_micromouse_a370ed01aeef173fa526508525155ac1c}{start\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Starting loop of algorythm mouse moving. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_micromouse_ad58f4ebbcb1d2806714505ababfe91d0}\label{class_micromouse_ad58f4ebbcb1d2806714505ababfe91d0}} 
+void \mbox{\hyperlink{class_micromouse_ad58f4ebbcb1d2806714505ababfe91d0}{comp\+Vs\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Change play mode to comp\+Vs\+Player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_micromouse_a2141bb5ff2fd7131e6c65d728c8f8301}{normal\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Change play mode to normal mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_micromouse_a4370a8352b8f1dbefd471ecaecb0df68}\label{class_micromouse_a4370a8352b8f1dbefd471ecaecb0df68}} 
+void \mbox{\hyperlink{class_micromouse_a4370a8352b8f1dbefd471ecaecb0df68}{restart}} ()
+\begin{DoxyCompactList}\small\item\em Stop timer and move mouse to start point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_micromouse_a4cca24ef348538767ff8c6a5682c79ae}{show\+Winner}} (bool is\+User)
+\begin{DoxyCompactList}\small\item\em Show info that mouse reach middle of maze. \end{DoxyCompactList}\item 
+QPolygonF \mbox{\hyperlink{class_micromouse_a262766769e80e9233b175a155f19d511}{generate\+Mouse\+Polygon}} (bool is\+User)
+\begin{DoxyCompactList}\small\item\em show current position of mouse \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_micromouse_a170d328df7a32902bef6a3406b6d0db6}{get\+Time\+Stamp}} ()
+\begin{DoxyCompactList}\small\item\em current timestamp \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_micromouse_aad2fdb8a52e41f79c7de4efa2963d11b}\label{class_micromouse_aad2fdb8a52e41f79c7de4efa2963d11b}} 
+Ui\+::\+Micromouse $\ast$ \mbox{\hyperlink{class_micromouse_aad2fdb8a52e41f79c7de4efa2963d11b}{ui}}
+\begin{DoxyCompactList}\small\item\em UI variable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_micromouse_ad6bed88dbcb8c6a90438f566dddccdcb}\label{class_micromouse_ad6bed88dbcb8c6a90438f566dddccdcb}} 
+QGraphics\+Scene $\ast$ \mbox{\hyperlink{class_micromouse_ad6bed88dbcb8c6a90438f566dddccdcb}{scene}}
+\begin{DoxyCompactList}\small\item\em Representing user maze view. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_micromouse_a89a9e4139ca828f1655c8b173f899c33}\label{class_micromouse_a89a9e4139ca828f1655c8b173f899c33}} 
+QGraphics\+Scene $\ast$ \mbox{\hyperlink{class_micromouse_a89a9e4139ca828f1655c8b173f899c33}{mouse\+Scene}}
+\begin{DoxyCompactList}\small\item\em Representing mouse maze view. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_micromouse_a36c1f4113ec5ba48d56a47cadcb8f82c}\label{class_micromouse_a36c1f4113ec5ba48d56a47cadcb8f82c}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_controller}{Game\+Controller}} $>$ \mbox{\hyperlink{class_micromouse_a36c1f4113ec5ba48d56a47cadcb8f82c}{controller}}
+\begin{DoxyCompactList}\small\item\em Controller for whole game actions, communicate with user. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_micromouse_aa55600d94a044bb177fb1bd0bd460176}\label{class_micromouse_aa55600d94a044bb177fb1bd0bd460176}} 
+std\+::unique\+\_\+ptr$<$ QTimer $>$ \mbox{\hyperlink{class_micromouse_aa55600d94a044bb177fb1bd0bd460176}{map\+Timer}}
+\begin{DoxyCompactList}\small\item\em control game loop \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_micromouse_a22ee22ae9827b050d97c558f84e65967}\label{class_micromouse_a22ee22ae9827b050d97c558f84e65967}} 
+bool \mbox{\hyperlink{class_micromouse_a22ee22ae9827b050d97c558f84e65967}{is\+Vs\+Mode}}
+\begin{DoxyCompactList}\small\item\em flag to set game mode \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_micromouse_a262766769e80e9233b175a155f19d511}\label{class_micromouse_a262766769e80e9233b175a155f19d511}} 
+\index{Micromouse@{Micromouse}!generateMousePolygon@{generateMousePolygon}}
+\index{generateMousePolygon@{generateMousePolygon}!Micromouse@{Micromouse}}
+\doxysubsubsection{\texorpdfstring{generateMousePolygon()}{generateMousePolygon()}}
+{\footnotesize\ttfamily QPolygonF Micromouse\+::generate\+Mouse\+Polygon (\begin{DoxyParamCaption}\item[{bool}]{is\+User }\end{DoxyParamCaption})}
+
+
+
+show current position of mouse 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+User} & user or algorythm mouse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mouse polygon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_micromouse_a170d328df7a32902bef6a3406b6d0db6}\label{class_micromouse_a170d328df7a32902bef6a3406b6d0db6}} 
+\index{Micromouse@{Micromouse}!getTimeStamp@{getTimeStamp}}
+\index{getTimeStamp@{getTimeStamp}!Micromouse@{Micromouse}}
+\doxysubsubsection{\texorpdfstring{getTimeStamp()}{getTimeStamp()}}
+{\footnotesize\ttfamily double Micromouse\+::get\+Time\+Stamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+current timestamp 
+
+helper for loop function \begin{DoxyReturn}{Returns}
+timestamp 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_micromouse_aa5ff2e30e4571ba045f3df782e4907db}\label{class_micromouse_aa5ff2e30e4571ba045f3df782e4907db}} 
+\index{Micromouse@{Micromouse}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!Micromouse@{Micromouse}}
+\doxysubsubsection{\texorpdfstring{keyPressEvent()}{keyPressEvent()}}
+{\footnotesize\ttfamily void Micromouse\+::key\+Press\+Event (\begin{DoxyParamCaption}\item[{QKey\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+React on key pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Pressed key event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_micromouse_a711ecb4512c55a299ec84a4d20a3d5b7}\label{class_micromouse_a711ecb4512c55a299ec84a4d20a3d5b7}} 
+\index{Micromouse@{Micromouse}!moveMouse@{moveMouse}}
+\index{moveMouse@{moveMouse}!Micromouse@{Micromouse}}
+\doxysubsubsection{\texorpdfstring{moveMouse()}{moveMouse()}}
+{\footnotesize\ttfamily void Micromouse\+::move\+Mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Move mouse in possible direction. 
+
+Controller send move action to mouse \mbox{\Hypertarget{class_micromouse_a2141bb5ff2fd7131e6c65d728c8f8301}\label{class_micromouse_a2141bb5ff2fd7131e6c65d728c8f8301}} 
+\index{Micromouse@{Micromouse}!normalMode@{normalMode}}
+\index{normalMode@{normalMode}!Micromouse@{Micromouse}}
+\doxysubsubsection{\texorpdfstring{normalMode()}{normalMode()}}
+{\footnotesize\ttfamily void Micromouse\+::normal\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Change play mode to normal mode. 
+
+Normal mode is when algorythm is trying to reach center of maze. On screen is showing mouse view and whole maze view. \mbox{\Hypertarget{class_micromouse_a99a3f4751040aa46aa07f4f4b727ca39}\label{class_micromouse_a99a3f4751040aa46aa07f4f4b727ca39}} 
+\index{Micromouse@{Micromouse}!printCompScene@{printCompScene}}
+\index{printCompScene@{printCompScene}!Micromouse@{Micromouse}}
+\doxysubsubsection{\texorpdfstring{printCompScene()}{printCompScene()}}
+{\footnotesize\ttfamily void Micromouse\+::print\+Comp\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print loaded maze with algorythm mouse. 
+
+Show current state of data comes from mouse sensors \mbox{\Hypertarget{class_micromouse_a9fdf64d6647526a72e49ef5ed74c6e91}\label{class_micromouse_a9fdf64d6647526a72e49ef5ed74c6e91}} 
+\index{Micromouse@{Micromouse}!printScene@{printScene}}
+\index{printScene@{printScene}!Micromouse@{Micromouse}}
+\doxysubsubsection{\texorpdfstring{printScene()}{printScene()}}
+{\footnotesize\ttfamily void Micromouse\+::print\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print scene of loaded maze. 
+
+Shows current state of mouse in maze, when app is in algorythm mode \mbox{\Hypertarget{class_micromouse_a7a158ccc1ed55a0f017506e784d07d7f}\label{class_micromouse_a7a158ccc1ed55a0f017506e784d07d7f}} 
+\index{Micromouse@{Micromouse}!printUserScene@{printUserScene}}
+\index{printUserScene@{printUserScene}!Micromouse@{Micromouse}}
+\doxysubsubsection{\texorpdfstring{printUserScene()}{printUserScene()}}
+{\footnotesize\ttfamily void Micromouse\+::print\+User\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print loaded maze with user mouse. 
+
+Show current state of user actions \mbox{\Hypertarget{class_micromouse_a223e9efb876ed08c8e5047155fb86866}\label{class_micromouse_a223e9efb876ed08c8e5047155fb86866}} 
+\index{Micromouse@{Micromouse}!printWall@{printWall}}
+\index{printWall@{printWall}!Micromouse@{Micromouse}}
+\doxysubsubsection{\texorpdfstring{printWall()}{printWall()}}
+{\footnotesize\ttfamily void Micromouse\+::print\+Wall (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}}}]{direction,  }\item[{\mbox{\hyperlink{class_tile}{Tile}}}]{tile }\end{DoxyParamCaption})}
+
+
+
+Print wall on direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Direction where wall should be placed \\
+\hline
+{\em tile} & Current printing tile \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_micromouse_a4cca24ef348538767ff8c6a5682c79ae}\label{class_micromouse_a4cca24ef348538767ff8c6a5682c79ae}} 
+\index{Micromouse@{Micromouse}!showWinner@{showWinner}}
+\index{showWinner@{showWinner}!Micromouse@{Micromouse}}
+\doxysubsubsection{\texorpdfstring{showWinner()}{showWinner()}}
+{\footnotesize\ttfamily void Micromouse\+::show\+Winner (\begin{DoxyParamCaption}\item[{bool}]{is\+User }\end{DoxyParamCaption})}
+
+
+
+Show info that mouse reach middle of maze. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+User} & user or algorythm mouse\\
+\hline
+\end{DoxyParams}
+Show appropriate message depending on the winner mouse 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{micromouse_8h}{micromouse.\+h}}\item 
+micromouse.\+cpp\end{DoxyCompactItemize}

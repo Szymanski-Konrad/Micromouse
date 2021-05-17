@@ -97,9 +97,6 @@ public:
     /// @details Show appropriate message depending on the winner mouse
     void showWinner(bool isUser);
 
-    /// @brief load random maze
-    void randomMaze();
-
     /// @brief show current position of mouse
     /// @param isUser user or algorythm mouse
     /// @return mouse polygon
@@ -117,7 +114,13 @@ public:
     bool isVsMode;
 
 public slots:
-    /// Function for Combobox
+    /// Function for Combobox for selecting algorythm from list
     void algorythmChanged(int index);
+
+    /// Function for Combobox for selecting maze from list
+    void mazeChanged(int index);
+
+    /// Function for slider to change speed of algorythm
+    void speedChanged(int value);
 };
 #endif // MICROMOUSE_H

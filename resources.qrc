@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>example2.txt</file>
+        <file>example3.txt</file>
+        <file>example4.txt</file>
+        <file>example5.txt</file>
+    </qresource>
+</RCC>

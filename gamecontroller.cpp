@@ -3,12 +3,13 @@
 GameController::GameController()
 {   
     this->selectedAlgorythm.reset(new LeftAlgorythm());
-    this->mazeFile = "example4.txt";
+    this->mazeFile = "example2.txt";
     this->currentMaze = Maze::fromFile(mazeFile);
     std::shared_ptr<Tile> tile = this->currentMaze->getTile(0,0);
     this->mouse = Mouse::startPosition(tile);
     this->userMouse = Mouse::startPosition(tile);
     this->isVsMode = false;
+    this->speed = 50;
 }
 
 void GameController::resetGame() {
@@ -94,5 +95,10 @@ bool GameController::moveUserMouse(DIRECTION direction) {
     return false;
 }
 
+void GameController::setSpeed(int value) {
+    this->speed = value;
+}
 
-
+int GameController::getSpeed() {
+    return this->speed;
+}

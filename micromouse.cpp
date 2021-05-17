@@ -13,6 +13,9 @@ Micromouse::Micromouse(QWidget *parent)
     ui->setupUi(this);
     ui->algorythmComboBox->addItems({"left-side", "right-side", "random"});
     ui->algorythmComboBox->setCurrentIndex(0);
+    ui->mazeComboBox->addItems({"maze1", "maze2", "maze3", "maze4"});
+    ui->mazeComboBox->setCurrentIndex(0);
+
     controller.reset(new GameController());
     isVsMode = false;
     ui->compLabel->hide();
@@ -27,9 +30,10 @@ Micromouse::Micromouse(QWidget *parent)
     connect(ui->startButton, &QPushButton::released, this, &Micromouse::startTimer);
     connect(ui->restartButton, &QPushButton::released, this, &Micromouse::restart);
     connect(ui->versusButton, &QPushButton::released, this, &Micromouse::compVsPlayer);
-    connect(ui->randomMazeButton, &QPushButton::released, this, &Micromouse::randomMaze);
     connect(ui->normalModeButton, &QPushButton::released, this, &Micromouse::normalMode);
     connect(ui->algorythmComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(algorythmChanged(int)));
+    connect(ui->mazeComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(mazeChanged(int)));
+    connect(ui->speedSlider, SIGNAL(valueChanged(int)), this, SLOT(speedChanged(int)));
 
     // Set the graphics loop
     double secondsPerFrame = 1.0 / 60;
@@ -56,7 +60,14 @@ Micromouse::Micromouse(QWidget *parent)
 }
 
 void Micromouse::startTimer() {
-    mapTimer.get()->start(300);
+    mapTimer.get()->start(controller->getSpeed());
+}
+
+void Micromouse::speedChanged(int value) {
+    controller->setSpeed(value);
+    mapTimer->stop();
+    ui->speedLabel->setText(std::to_string(value).c_str());
+    startTimer();
 }
 
 void Micromouse::compVsPlayer() {
@@ -92,17 +103,29 @@ void Micromouse::algorythmChanged(int index) {
     restart();
 }
 
+void Micromouse::mazeChanged(int index) {
+    switch(index) {
+    case 0:
+        controller.get()->setMazeFile("example2.txt");
+        break;
+    case 1:
+        controller.get()->setMazeFile("example3.txt");
+        break;
+    case 2:
+        controller.get()->setMazeFile("example4.txt");
+        break;
+    case 3:
+        controller.get()->setMazeFile("example5.txt");
+        break;
+    }
+
+    restart();
+}
+
 void Micromouse::restart() {
     controller.get()->resetGame();
     mapTimer.get()->stop();
     printScene();
-}
-
-void Micromouse::randomMaze() {
-    int number = rand() % 5;
-    std::string fileName = "example" + std::to_string(number + 1) + ".txt";
-    controller.get()->setMazeFile(fileName);
-    restart();
 }
 
 double Micromouse::getTimeStamp() {

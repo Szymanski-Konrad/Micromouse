@@ -1,0 +1,127 @@
+\hypertarget{direction_8h}{}\doxysection{direction.\+h File Reference}
+\label{direction_8h}\index{direction.h@{direction.h}}
+
+
+Direction enum.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}} \{ \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a2bf8f791695c70efa9c14e6f1c326403}{NORTH}}
+, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a45ac78bf3d4882ac520f4e7fb08d55c5}{EAST}}
+, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a96e44fa82e5a5263fb92337be422d3eb}{SOUTH}}
+, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a83c9f5692281bf59471b13dfddb3af91}{WEST}}
+ \}
+\begin{DoxyCompactList}\small\item\em Possible directions in maze. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::map$<$ \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}}, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}} $>$ \mbox{\hyperlink{direction_8h_ac884ae80402343ac3b3fd148c870336f}{rotate\+Left\+Map}}
+\begin{DoxyCompactList}\small\item\em Translate direction when rotate right. \end{DoxyCompactList}\item 
+const std\+::map$<$ \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}}, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}} $>$ \mbox{\hyperlink{direction_8h_ab4517ad5c928041f8c3cb1d3925cb315}{rotate\+Right\+Map}}
+\begin{DoxyCompactList}\small\item\em Translate direction when rotate right. \end{DoxyCompactList}\item 
+const std\+::map$<$ \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}}, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}} $>$ \mbox{\hyperlink{direction_8h_ad80bf8c96d1df586ba857ac40bd6fbfc}{rotate\+Back\+Map}}
+\begin{DoxyCompactList}\small\item\em Translate direction when rotate back. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Direction enum. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{direction_8h_aa268a41a13430b18e933ed40207178d0}\label{direction_8h_aa268a41a13430b18e933ed40207178d0}} 
+\index{direction.h@{direction.h}!DIRECTION@{DIRECTION}}
+\index{DIRECTION@{DIRECTION}!direction.h@{direction.h}}
+\doxysubsubsection{\texorpdfstring{DIRECTION}{DIRECTION}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Possible directions in maze. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NORTH@{NORTH}!direction.h@{direction.h}}\index{direction.h@{direction.h}!NORTH@{NORTH}}}\mbox{\Hypertarget{direction_8h_aa268a41a13430b18e933ed40207178d0a2bf8f791695c70efa9c14e6f1c326403}\label{direction_8h_aa268a41a13430b18e933ed40207178d0a2bf8f791695c70efa9c14e6f1c326403}} 
+NORTH&North direction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EAST@{EAST}!direction.h@{direction.h}}\index{direction.h@{direction.h}!EAST@{EAST}}}\mbox{\Hypertarget{direction_8h_aa268a41a13430b18e933ed40207178d0a45ac78bf3d4882ac520f4e7fb08d55c5}\label{direction_8h_aa268a41a13430b18e933ed40207178d0a45ac78bf3d4882ac520f4e7fb08d55c5}} 
+EAST&East direction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUTH@{SOUTH}!direction.h@{direction.h}}\index{direction.h@{direction.h}!SOUTH@{SOUTH}}}\mbox{\Hypertarget{direction_8h_aa268a41a13430b18e933ed40207178d0a96e44fa82e5a5263fb92337be422d3eb}\label{direction_8h_aa268a41a13430b18e933ed40207178d0a96e44fa82e5a5263fb92337be422d3eb}} 
+SOUTH&South direction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WEST@{WEST}!direction.h@{direction.h}}\index{direction.h@{direction.h}!WEST@{WEST}}}\mbox{\Hypertarget{direction_8h_aa268a41a13430b18e933ed40207178d0a83c9f5692281bf59471b13dfddb3af91}\label{direction_8h_aa268a41a13430b18e933ed40207178d0a83c9f5692281bf59471b13dfddb3af91}} 
+WEST&West direction. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{direction_8h_ad80bf8c96d1df586ba857ac40bd6fbfc}\label{direction_8h_ad80bf8c96d1df586ba857ac40bd6fbfc}} 
+\index{direction.h@{direction.h}!rotateBackMap@{rotateBackMap}}
+\index{rotateBackMap@{rotateBackMap}!direction.h@{direction.h}}
+\doxysubsubsection{\texorpdfstring{rotateBackMap}{rotateBackMap}}
+{\footnotesize\ttfamily const std\+::map$<$\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}}, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}}$>$ rotate\+Back\+Map}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a2bf8f791695c70efa9c14e6f1c326403}{DIRECTION::NORTH}}, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a96e44fa82e5a5263fb92337be422d3eb}{DIRECTION::SOUTH}}\},}
+\DoxyCodeLine{    \{\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a45ac78bf3d4882ac520f4e7fb08d55c5}{DIRECTION::EAST}}, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a83c9f5692281bf59471b13dfddb3af91}{DIRECTION::WEST}}\},}
+\DoxyCodeLine{    \{\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a96e44fa82e5a5263fb92337be422d3eb}{DIRECTION::SOUTH}}, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a2bf8f791695c70efa9c14e6f1c326403}{DIRECTION::NORTH}}\},}
+\DoxyCodeLine{    \{\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a83c9f5692281bf59471b13dfddb3af91}{DIRECTION::WEST}}, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a45ac78bf3d4882ac520f4e7fb08d55c5}{DIRECTION::EAST}}\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Translate direction when rotate back. 
+
+\mbox{\Hypertarget{direction_8h_ac884ae80402343ac3b3fd148c870336f}\label{direction_8h_ac884ae80402343ac3b3fd148c870336f}} 
+\index{direction.h@{direction.h}!rotateLeftMap@{rotateLeftMap}}
+\index{rotateLeftMap@{rotateLeftMap}!direction.h@{direction.h}}
+\doxysubsubsection{\texorpdfstring{rotateLeftMap}{rotateLeftMap}}
+{\footnotesize\ttfamily const std\+::map$<$\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}}, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}}$>$ rotate\+Left\+Map}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a2bf8f791695c70efa9c14e6f1c326403}{DIRECTION::NORTH}}, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a83c9f5692281bf59471b13dfddb3af91}{DIRECTION::WEST}}\},}
+\DoxyCodeLine{    \{\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a45ac78bf3d4882ac520f4e7fb08d55c5}{DIRECTION::EAST}}, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a2bf8f791695c70efa9c14e6f1c326403}{DIRECTION::NORTH}}\},}
+\DoxyCodeLine{    \{\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a96e44fa82e5a5263fb92337be422d3eb}{DIRECTION::SOUTH}}, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a45ac78bf3d4882ac520f4e7fb08d55c5}{DIRECTION::EAST}}\},}
+\DoxyCodeLine{    \{\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a83c9f5692281bf59471b13dfddb3af91}{DIRECTION::WEST}}, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a96e44fa82e5a5263fb92337be422d3eb}{DIRECTION::SOUTH}}\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Translate direction when rotate right. 
+
+\mbox{\Hypertarget{direction_8h_ab4517ad5c928041f8c3cb1d3925cb315}\label{direction_8h_ab4517ad5c928041f8c3cb1d3925cb315}} 
+\index{direction.h@{direction.h}!rotateRightMap@{rotateRightMap}}
+\index{rotateRightMap@{rotateRightMap}!direction.h@{direction.h}}
+\doxysubsubsection{\texorpdfstring{rotateRightMap}{rotateRightMap}}
+{\footnotesize\ttfamily const std\+::map$<$\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}}, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}}$>$ rotate\+Right\+Map}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a2bf8f791695c70efa9c14e6f1c326403}{DIRECTION::NORTH}}, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a45ac78bf3d4882ac520f4e7fb08d55c5}{DIRECTION::EAST}}\},}
+\DoxyCodeLine{    \{\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a45ac78bf3d4882ac520f4e7fb08d55c5}{DIRECTION::EAST}}, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a96e44fa82e5a5263fb92337be422d3eb}{DIRECTION::SOUTH}}\},}
+\DoxyCodeLine{    \{\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a96e44fa82e5a5263fb92337be422d3eb}{DIRECTION::SOUTH}}, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a83c9f5692281bf59471b13dfddb3af91}{DIRECTION::WEST}}\},}
+\DoxyCodeLine{    \{\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a83c9f5692281bf59471b13dfddb3af91}{DIRECTION::WEST}}, \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0a2bf8f791695c70efa9c14e6f1c326403}{DIRECTION::NORTH}}\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Translate direction when rotate right. 
+

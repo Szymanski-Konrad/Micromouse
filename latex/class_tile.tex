@@ -1,0 +1,142 @@
+\hypertarget{class_tile}{}\doxysection{Tile Class Reference}
+\label{class_tile}\index{Tile@{Tile}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tile_aeeb5593bb6b75aae2edfcccbc84ab378}\label{class_tile_aeeb5593bb6b75aae2edfcccbc84ab378}} 
+\mbox{\hyperlink{class_tile_aeeb5593bb6b75aae2edfcccbc84ab378}{Tile}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tile_a6c4b63ba03501c04a3fa2a9bb61c2c19}{Tile}} (int x, int y, std\+::map$<$ \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}}, bool $>$ walls)
+\begin{DoxyCompactList}\small\item\em Class constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tile_a95929f2d7fbdbb05438a0813bd42a2ed}{Tile}} (std\+::vector$<$ int $>$ values)
+\begin{DoxyCompactList}\small\item\em Custom class constructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tile_ab600def8a3df29e48c1bd03300012df9}{getX}} () const
+\begin{DoxyCompactList}\small\item\em get tile X position \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tile_a27e8422c121a345774a66d98a937c761}{getY}} () const
+\begin{DoxyCompactList}\small\item\em get tile Y position \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tile_a27ed63ace7a75b8f61ee5997ab864b47}{is\+Wall}} (\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}} direction) const
+\begin{DoxyCompactList}\small\item\em check if is wall on direction \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_wall}{Wall}} $>$ \mbox{\hyperlink{class_tile_a22fd25669470c6c759cfd15e8bb6a27f}{walls\+Coords}} () const
+\begin{DoxyCompactList}\small\item\em get wall coordinations \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}} $>$ \mbox{\hyperlink{class_tile_acf485dfd1307c2b7dfbe5bfa9bbea2dc}{possible\+Directions}} () const
+\begin{DoxyCompactList}\small\item\em get possible directions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tile_ab0656a5470f4c71c90727f1965a8a2f2}\label{class_tile_ab0656a5470f4c71c90727f1965a8a2f2}} 
+bool \mbox{\hyperlink{class_tile_ab0656a5470f4c71c90727f1965a8a2f2}{operator$<$}} (\mbox{\hyperlink{class_tile}{Tile}} other) const
+\begin{DoxyCompactList}\small\item\em compare operator override \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tile_a6c4b63ba03501c04a3fa2a9bb61c2c19}\label{class_tile_a6c4b63ba03501c04a3fa2a9bb61c2c19}} 
+\index{Tile@{Tile}!Tile@{Tile}}
+\index{Tile@{Tile}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{Tile()}{Tile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tile\+::\+Tile (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::map$<$ \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}}, bool $>$}]{walls }\end{DoxyParamCaption})}
+
+
+
+Class constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & tile X position \\
+\hline
+{\em y} & tile Y positon \\
+\hline
+{\em walls} & map of direction with walls \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tile_a95929f2d7fbdbb05438a0813bd42a2ed}\label{class_tile_a95929f2d7fbdbb05438a0813bd42a2ed}} 
+\index{Tile@{Tile}!Tile@{Tile}}
+\index{Tile@{Tile}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{Tile()}{Tile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tile\+::\+Tile (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{values }\end{DoxyParamCaption})}
+
+
+
+Custom class constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & values from file ~\newline
+ (x,y, N, W, S, E) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tile_ab600def8a3df29e48c1bd03300012df9}\label{class_tile_ab600def8a3df29e48c1bd03300012df9}} 
+\index{Tile@{Tile}!getX@{getX}}
+\index{getX@{getX}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily int Tile\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get tile X position 
+
+\begin{DoxyReturn}{Returns}
+X position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tile_a27e8422c121a345774a66d98a937c761}\label{class_tile_a27e8422c121a345774a66d98a937c761}} 
+\index{Tile@{Tile}!getY@{getY}}
+\index{getY@{getY}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily int Tile\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get tile Y position 
+
+\begin{DoxyReturn}{Returns}
+Y position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tile_a27ed63ace7a75b8f61ee5997ab864b47}\label{class_tile_a27ed63ace7a75b8f61ee5997ab864b47}} 
+\index{Tile@{Tile}!isWall@{isWall}}
+\index{isWall@{isWall}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{isWall()}{isWall()}}
+{\footnotesize\ttfamily bool Tile\+::is\+Wall (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}}}]{direction }\end{DoxyParamCaption}) const}
+
+
+
+check if is wall on direction 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & direction to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean value if wall exists or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tile_acf485dfd1307c2b7dfbe5bfa9bbea2dc}\label{class_tile_acf485dfd1307c2b7dfbe5bfa9bbea2dc}} 
+\index{Tile@{Tile}!possibleDirections@{possibleDirections}}
+\index{possibleDirections@{possibleDirections}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{possibleDirections()}{possibleDirections()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}} $>$ Tile\+::possible\+Directions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get possible directions 
+
+Possible directions are this, where is no wall \begin{DoxyReturn}{Returns}
+vector of possible directions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tile_a22fd25669470c6c759cfd15e8bb6a27f}\label{class_tile_a22fd25669470c6c759cfd15e8bb6a27f}} 
+\index{Tile@{Tile}!wallsCoords@{wallsCoords}}
+\index{wallsCoords@{wallsCoords}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{wallsCoords()}{wallsCoords()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_wall}{Wall}} $>$ Tile\+::walls\+Coords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get wall coordinations 
+
+\begin{DoxyReturn}{Returns}
+vector of tile walls 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tile_8h}{tile.\+h}}\item 
+tile.\+cpp\end{DoxyCompactItemize}

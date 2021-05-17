@@ -44,8 +44,10 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    example1.txt \
     example2.txt \
     example3.txt \
     example4.txt \
     example5.txt
+
+RESOURCES += \
+    resources.qrc

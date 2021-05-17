@@ -1,0 +1,197 @@
+\hypertarget{class_mouse}{}\doxysection{Mouse Class Reference}
+\label{class_mouse}\index{Mouse@{Mouse}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_mouse_a99024d3700d649ae19c1537b42a3e86d}\label{class_mouse_a99024d3700d649ae19c1537b42a3e86d}} 
+\mbox{\hyperlink{class_mouse_a99024d3700d649ae19c1537b42a3e86d}{Mouse}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mouse_a526528268f44d2b55fd18701c6025ee0}{Mouse}} (int x, int y, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tile}{Tile}} $>$ tile)
+\begin{DoxyCompactList}\small\item\em Class constructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_mouse_a8efa32b2ef1f504ee1585450b6971c0d}{getX}} ()
+\begin{DoxyCompactList}\small\item\em get mouse X position \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_mouse_a68f299451383282ac0ab53acecdafa91}{getY}} ()
+\begin{DoxyCompactList}\small\item\em get mouse Y position \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mouse_aab4dceed270578e8e81963d60c871956}\label{class_mouse_aab4dceed270578e8e81963d60c871956}} 
+void \mbox{\hyperlink{class_mouse_aab4dceed270578e8e81963d60c871956}{rotate\+Left}} ()
+\begin{DoxyCompactList}\small\item\em turn mouse left \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mouse_a13f6f3b9d604718a42868961c2e52a87}\label{class_mouse_a13f6f3b9d604718a42868961c2e52a87}} 
+void \mbox{\hyperlink{class_mouse_a13f6f3b9d604718a42868961c2e52a87}{rotate\+Right}} ()
+\begin{DoxyCompactList}\small\item\em turn mouse right \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mouse_a75847ea859bf4a72f527e1abf05fcce8}{rotate\+To\+Direction}} (\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}} direction)
+\begin{DoxyCompactList}\small\item\em turn mouse to specific direction \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mouse_a0a3ab6c3ed80cd2a5506edf554849a72}\label{class_mouse_a0a3ab6c3ed80cd2a5506edf554849a72}} 
+void \mbox{\hyperlink{class_mouse_a0a3ab6c3ed80cd2a5506edf554849a72}{turn\+Back}} ()
+\begin{DoxyCompactList}\small\item\em turn mouse back \end{DoxyCompactList}\item 
+\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}} \mbox{\hyperlink{class_mouse_a4d441136e4bb3d2a57e2b42be41408d2}{get\+Direction}} ()
+\begin{DoxyCompactList}\small\item\em get current mouse direction \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mouse_a52ee2cdc106c37bb566a13322018dd60}\label{class_mouse_a52ee2cdc106c37bb566a13322018dd60}} 
+void \mbox{\hyperlink{class_mouse_a52ee2cdc106c37bb566a13322018dd60}{move\+Forward}} ()
+\begin{DoxyCompactList}\small\item\em move mouse forward \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mouse_a09ee93bffd746602b0315d28186a3f29}{visit\+Tile}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tile}{Tile}} $>$ tile)
+\begin{DoxyCompactList}\small\item\em mouse visit new tile \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tile}{Tile}} $>$ $>$ \mbox{\hyperlink{class_mouse_aac69dcac108e9fef07ee02a78fc9e97b}{get\+Visited\+Tiles}} ()
+\begin{DoxyCompactList}\small\item\em get all visited tiles \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_mouse_adecf2262944ebc40370164c464d4efb7}{can\+Move}} ()
+\begin{DoxyCompactList}\small\item\em check if mouse can move forward \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_mouse_a0eb70847edc74445a49cd635f914de7f}{get\+Number\+Of\+Moves}} ()
+\begin{DoxyCompactList}\small\item\em get number of mouse moves \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_mouse}{Mouse}} $\ast$ \mbox{\hyperlink{class_mouse_a68305997a0e556ce7b63083f1e1bb9b3}{start\+Position}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tile}{Tile}} $>$ tile)
+\begin{DoxyCompactList}\small\item\em Create new mouse object in start position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mouse_a526528268f44d2b55fd18701c6025ee0}\label{class_mouse_a526528268f44d2b55fd18701c6025ee0}} 
+\index{Mouse@{Mouse}!Mouse@{Mouse}}
+\index{Mouse@{Mouse}!Mouse@{Mouse}}
+\doxysubsubsection{\texorpdfstring{Mouse()}{Mouse()}}
+{\footnotesize\ttfamily Mouse\+::\+Mouse (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tile}{Tile}} $>$}]{tile }\end{DoxyParamCaption})}
+
+
+
+Class constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & starting x position \\
+\hline
+{\em y} & starting y position \\
+\hline
+{\em tile} & startin tile \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mouse_adecf2262944ebc40370164c464d4efb7}\label{class_mouse_adecf2262944ebc40370164c464d4efb7}} 
+\index{Mouse@{Mouse}!canMove@{canMove}}
+\index{canMove@{canMove}!Mouse@{Mouse}}
+\doxysubsubsection{\texorpdfstring{canMove()}{canMove()}}
+{\footnotesize\ttfamily bool Mouse\+::can\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+check if mouse can move forward 
+
+\begin{DoxyReturn}{Returns}
+boolean value of move possibility 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mouse_a4d441136e4bb3d2a57e2b42be41408d2}\label{class_mouse_a4d441136e4bb3d2a57e2b42be41408d2}} 
+\index{Mouse@{Mouse}!getDirection@{getDirection}}
+\index{getDirection@{getDirection}!Mouse@{Mouse}}
+\doxysubsubsection{\texorpdfstring{getDirection()}{getDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}} Mouse\+::get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get current mouse direction 
+
+\begin{DoxyReturn}{Returns}
+Current mouse direction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mouse_a0eb70847edc74445a49cd635f914de7f}\label{class_mouse_a0eb70847edc74445a49cd635f914de7f}} 
+\index{Mouse@{Mouse}!getNumberOfMoves@{getNumberOfMoves}}
+\index{getNumberOfMoves@{getNumberOfMoves}!Mouse@{Mouse}}
+\doxysubsubsection{\texorpdfstring{getNumberOfMoves()}{getNumberOfMoves()}}
+{\footnotesize\ttfamily std\+::string Mouse\+::get\+Number\+Of\+Moves (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get number of mouse moves 
+
+\begin{DoxyReturn}{Returns}
+number of moves converted to string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mouse_aac69dcac108e9fef07ee02a78fc9e97b}\label{class_mouse_aac69dcac108e9fef07ee02a78fc9e97b}} 
+\index{Mouse@{Mouse}!getVisitedTiles@{getVisitedTiles}}
+\index{getVisitedTiles@{getVisitedTiles}!Mouse@{Mouse}}
+\doxysubsubsection{\texorpdfstring{getVisitedTiles()}{getVisitedTiles()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tile}{Tile}} $>$ $>$ Mouse\+::get\+Visited\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get all visited tiles 
+
+\begin{DoxyReturn}{Returns}
+all visited tiles 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mouse_a8efa32b2ef1f504ee1585450b6971c0d}\label{class_mouse_a8efa32b2ef1f504ee1585450b6971c0d}} 
+\index{Mouse@{Mouse}!getX@{getX}}
+\index{getX@{getX}!Mouse@{Mouse}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily int Mouse\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get mouse X position 
+
+\begin{DoxyReturn}{Returns}
+mouse X position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mouse_a68f299451383282ac0ab53acecdafa91}\label{class_mouse_a68f299451383282ac0ab53acecdafa91}} 
+\index{Mouse@{Mouse}!getY@{getY}}
+\index{getY@{getY}!Mouse@{Mouse}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily int Mouse\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get mouse Y position 
+
+\begin{DoxyReturn}{Returns}
+mouse Y position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mouse_a75847ea859bf4a72f527e1abf05fcce8}\label{class_mouse_a75847ea859bf4a72f527e1abf05fcce8}} 
+\index{Mouse@{Mouse}!rotateToDirection@{rotateToDirection}}
+\index{rotateToDirection@{rotateToDirection}!Mouse@{Mouse}}
+\doxysubsubsection{\texorpdfstring{rotateToDirection()}{rotateToDirection()}}
+{\footnotesize\ttfamily void Mouse\+::rotate\+To\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{direction_8h_aa268a41a13430b18e933ed40207178d0}{DIRECTION}}}]{direction }\end{DoxyParamCaption})}
+
+
+
+turn mouse to specific direction 
+
+When algorythm mouse can rotate only left or right, user mouse can rotate in every direction 
+\begin{DoxyParams}{Parameters}
+{\em direction} & rotate direction \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mouse_a68305997a0e556ce7b63083f1e1bb9b3}\label{class_mouse_a68305997a0e556ce7b63083f1e1bb9b3}} 
+\index{Mouse@{Mouse}!startPosition@{startPosition}}
+\index{startPosition@{startPosition}!Mouse@{Mouse}}
+\doxysubsubsection{\texorpdfstring{startPosition()}{startPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mouse}{Mouse}} $\ast$ Mouse\+::start\+Position (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tile}{Tile}} $>$}]{tile }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create new mouse object in start position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tile} & starting tile \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mouse_a09ee93bffd746602b0315d28186a3f29}\label{class_mouse_a09ee93bffd746602b0315d28186a3f29}} 
+\index{Mouse@{Mouse}!visitTile@{visitTile}}
+\index{visitTile@{visitTile}!Mouse@{Mouse}}
+\doxysubsubsection{\texorpdfstring{visitTile()}{visitTile()}}
+{\footnotesize\ttfamily void Mouse\+::visit\+Tile (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tile}{Tile}} $>$}]{tile }\end{DoxyParamCaption})}
+
+
+
+mouse visit new tile 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tile} & tile to which mouse moved \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mouse_8h}{mouse.\+h}}\item 
+mouse.\+cpp\end{DoxyCompactItemize}

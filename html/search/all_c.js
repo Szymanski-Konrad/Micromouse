@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['possibledirections_63',['possibleDirections',['../class_tile.html#acf485dfd1307c2b7dfbe5bfa9bbea2dc',1,'Tile']]],
-  ['printcompscene_64',['printCompScene',['../class_micromouse.html#a99a3f4751040aa46aa07f4f4b727ca39',1,'Micromouse']]],
-  ['printscene_65',['printScene',['../class_micromouse.html#a9fdf64d6647526a72e49ef5ed74c6e91',1,'Micromouse']]],
-  ['printuserscene_66',['printUserScene',['../class_micromouse.html#a7a158ccc1ed55a0f017506e784d07d7f',1,'Micromouse']]],
-  ['printwall_67',['printWall',['../class_micromouse.html#a223e9efb876ed08c8e5047155fb86866',1,'Micromouse']]]
+  ['resetgame_63',['resetGame',['../class_game_controller.html#a466726ab5ccac77661d81925be5ea5ff',1,'GameController']]],
+  ['restart_64',['restart',['../class_micromouse.html#a4370a8352b8f1dbefd471ecaecb0df68',1,'Micromouse']]],
+  ['rotatebackmap_65',['rotateBackMap',['../direction_8h.html#ad80bf8c96d1df586ba857ac40bd6fbfc',1,'direction.h']]],
+  ['rotateleft_66',['rotateLeft',['../class_mouse.html#aab4dceed270578e8e81963d60c871956',1,'Mouse']]],
+  ['rotateleftmap_67',['rotateLeftMap',['../direction_8h.html#ac884ae80402343ac3b3fd148c870336f',1,'direction.h']]],
+  ['rotateright_68',['rotateRight',['../class_mouse.html#a13f6f3b9d604718a42868961c2e52a87',1,'Mouse']]],
+  ['rotaterightmap_69',['rotateRightMap',['../direction_8h.html#ab4517ad5c928041f8c3cb1d3925cb315',1,'direction.h']]],
+  ['rotatetodirection_70',['rotateToDirection',['../class_mouse.html#a75847ea859bf4a72f527e1abf05fcce8',1,'Mouse']]]
 ];

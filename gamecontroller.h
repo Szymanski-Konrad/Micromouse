@@ -78,6 +78,13 @@ public:
     /// @return boolean value wheter vs mode is enabled or not
     bool isVsModeEnabled();
 
+    /// @brief Set new speed of algorythm
+    void setSpeed(int value);
+
+    /// @brief Get speed of algorythm
+    /// @return Algorythm speed
+    int getSpeed();
+
 private:
     std::shared_ptr<Algorythm> selectedAlgorythm;
     Maze* currentMaze;
@@ -85,6 +92,7 @@ private:
     Mouse* userMouse;
     std::string mazeFile;
     bool isVsMode;
+    int speed;
 };
 
 #endif // GAMECONTROLLER_H

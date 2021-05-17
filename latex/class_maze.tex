@@ -1,0 +1,149 @@
+\hypertarget{class_maze}{}\doxysection{Maze Class Reference}
+\label{class_maze}\index{Maze@{Maze}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_maze_a7ecf1da4b9685f97bf3110a8479e724b}\label{class_maze_a7ecf1da4b9685f97bf3110a8479e724b}} 
+\mbox{\hyperlink{class_maze_a7ecf1da4b9685f97bf3110a8479e724b}{Maze}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_maze_a35ba333cdcbf70e45b91f73bbb535e2f}{Maze}} (std\+::vector$<$ std\+::vector$<$ int $>$$>$ tiles)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_maze}{Maze}} class constructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_maze_a210ae5ab961b8cd130c7d2bf010e1c75}{get\+Width}} () const
+\begin{DoxyCompactList}\small\item\em get maze width \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_maze_a275cb08cc708a067757f5b15a7a44dae}{get\+Height}} () const
+\begin{DoxyCompactList}\small\item\em get maze height \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tile}{Tile}} $>$ \mbox{\hyperlink{class_maze_aa819c21733eeb79fea42ba77d34d34f9}{get\+Tile}} (int x, int y) const
+\begin{DoxyCompactList}\small\item\em get maze tile on specific coords \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tile}{Tile}} $>$ $>$ \mbox{\hyperlink{class_maze_a95d3c233ac66e2ce02119b8d4e26bed1}{get\+Tiles}} () const
+\begin{DoxyCompactList}\small\item\em get all maze tiles \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_maze_a74173c65ec5ca56151eb62a5e65f5a41}{is\+In\+Center}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em check if position is in center \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_maze}{Maze}} $\ast$ \mbox{\hyperlink{class_maze_a27285db867b8f9661f36681680cc80f5}{from\+File}} (const std\+::string path)
+\begin{DoxyCompactList}\small\item\em Create maze from file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_maze_a35ba333cdcbf70e45b91f73bbb535e2f}\label{class_maze_a35ba333cdcbf70e45b91f73bbb535e2f}} 
+\index{Maze@{Maze}!Maze@{Maze}}
+\index{Maze@{Maze}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{Maze()}{Maze()}}
+{\footnotesize\ttfamily Maze\+::\+Maze (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ int $>$$>$}]{tiles }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_maze}{Maze}} class constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tiles} & maze tiles \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_maze_a27285db867b8f9661f36681680cc80f5}\label{class_maze_a27285db867b8f9661f36681680cc80f5}} 
+\index{Maze@{Maze}!fromFile@{fromFile}}
+\index{fromFile@{fromFile}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{fromFile()}{fromFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_maze}{Maze}} $\ast$ Maze\+::from\+File (\begin{DoxyParamCaption}\item[{const std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create maze from file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New maze object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_maze_a275cb08cc708a067757f5b15a7a44dae}\label{class_maze_a275cb08cc708a067757f5b15a7a44dae}} 
+\index{Maze@{Maze}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily int Maze\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get maze height 
+
+\begin{DoxyReturn}{Returns}
+maze height 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_maze_aa819c21733eeb79fea42ba77d34d34f9}\label{class_maze_aa819c21733eeb79fea42ba77d34d34f9}} 
+\index{Maze@{Maze}!getTile@{getTile}}
+\index{getTile@{getTile}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{getTile()}{getTile()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tile}{Tile}} $>$ Maze\+::get\+Tile (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption}) const}
+
+
+
+get maze tile on specific coords 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordination \\
+\hline
+{\em y} & Y coordination \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tile on given coords 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_maze_a95d3c233ac66e2ce02119b8d4e26bed1}\label{class_maze_a95d3c233ac66e2ce02119b8d4e26bed1}} 
+\index{Maze@{Maze}!getTiles@{getTiles}}
+\index{getTiles@{getTiles}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{getTiles()}{getTiles()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tile}{Tile}} $>$ $>$ Maze\+::get\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get all maze tiles 
+
+\begin{DoxyReturn}{Returns}
+all maze tiles 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_maze_a210ae5ab961b8cd130c7d2bf010e1c75}\label{class_maze_a210ae5ab961b8cd130c7d2bf010e1c75}} 
+\index{Maze@{Maze}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily int Maze\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get maze width 
+
+\begin{DoxyReturn}{Returns}
+maze width 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_maze_a74173c65ec5ca56151eb62a5e65f5a41}\label{class_maze_a74173c65ec5ca56151eb62a5e65f5a41}} 
+\index{Maze@{Maze}!isInCenter@{isInCenter}}
+\index{isInCenter@{isInCenter}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{isInCenter()}{isInCenter()}}
+{\footnotesize\ttfamily bool Maze\+::is\+In\+Center (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+check if position is in center 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X position \\
+\hline
+{\em y} & Y position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean value whether is in center or not 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{maze_8h}{maze.\+h}}\item 
+maze.\+cpp\end{DoxyCompactItemize}
