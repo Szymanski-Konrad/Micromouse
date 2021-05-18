@@ -44,6 +44,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
+    class_model.qmodel \
     example2.txt \
     example3.txt \
     example4.txt \
@@ -51,3 +52,6 @@ DISTFILES += \
 
 RESOURCES += \
     resources.qrc
+
+STATECHARTS += \
+    stan.scxml

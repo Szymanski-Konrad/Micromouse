@@ -1,0 +1,13 @@
+<map id="direction.h" name="direction.h">
+<area shape="rect" id="node1" title="Direction enum." alt="" coords="565,5,647,32"/>
+<area shape="rect" id="node2" href="$algorythm_8h.html" title="Algorythm abstraction." alt="" coords="461,304,620,331"/>
+<area shape="rect" id="node8" href="$tile_8h.html" title="Square part of maze with max 4 walls." alt="" coords="621,155,671,181"/>
+<area shape="rect" id="node11" href="$wall_8h.html" title="Representation of inpassable object in maze." alt="" coords="579,80,633,107"/>
+<area shape="rect" id="node3" href="$left__algorythm_8h.html" title="Left Algorythm implementation." alt="" coords="5,379,188,405"/>
+<area shape="rect" id="node6" href="$random__algorythm_8h.html" title="Random Algorythm implementation." alt="" coords="213,379,421,405"/>
+<area shape="rect" id="node7" href="$right__algorythm_8h.html" title="Right Algorythm implementation." alt="" coords="445,379,636,405"/>
+<area shape="rect" id="node4" href="$gamecontroller_8h.html" title="Controlling everything inside application." alt="" coords="481,453,600,480"/>
+<area shape="rect" id="node5" href="$micromouse_8h.html" title="Responsible for graphical part of application." alt="" coords="489,528,593,555"/>
+<area shape="rect" id="node9" href="$maze_8h.html" title="Field with walls, where mouse can move around." alt="" coords="683,229,748,256"/>
+<area shape="rect" id="node10" href="$mouse_8h.html" title="Represents functionality of robot." alt="" coords="586,229,658,256"/>
+</map>

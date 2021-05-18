@@ -84,9 +84,6 @@
     <property name="horizontalScrollBarPolicy">
      <enum>Qt::ScrollBarAlwaysOff</enum>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-    </property>
    </widget>
    <widget class="QGraphicsView" name="userGraphicsView">
     <property name="geometry">
@@ -106,9 +103,6 @@
     <property name="horizontalScrollBarPolicy">
      <enum>Qt::ScrollBarAlwaysOff</enum>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-    </property>
    </widget>
    <widget class="QPushButton" name="normalModeButton">
     <property name="geometry">
@@ -120,7 +114,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Algorythm</string>
+     <string>Algorytm</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -135,9 +129,6 @@
     <property name="text">
      <string>Tryby gry</string>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
@@ -150,9 +141,6 @@
     </property>
     <property name="text">
      <string>Sterowanie</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -167,24 +155,18 @@
     <property name="text">
      <string>Wybór algorytmu</string>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
    </widget>
    <widget class="QLabel" name="playerLabel">
     <property name="geometry">
      <rect>
       <x>60</x>
       <y>100</y>
-      <width>391</width>
+      <width>241</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Gracz</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <string>Gracz (WSAD)</string>
     </property>
    </widget>
    <widget class="QLabel" name="compLabel">
@@ -192,15 +174,12 @@
      <rect>
       <x>536</x>
       <y>100</y>
-      <width>391</width>
+      <width>271</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
      <string>Komputer</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="compMovesLabel">
@@ -250,9 +229,6 @@
     </property>
     <property name="text">
      <string>Wybór labiryntu</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QSlider" name="speedSlider">

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fromfile_110',['fromFile',['../class_maze.html#a27285db867b8f9661f36681680cc80f5',1,'Maze']]]
+  ['fromfile_133',['fromFile',['../class_maze.html#a27285db867b8f9661f36681680cc80f5',1,'Maze']]]
 ];

@@ -1,0 +1,23 @@
+<map id="gamecontroller.h" name="gamecontroller.h">
+<area shape="rect" id="node1" title="Controlling everything inside application." alt="" coords="278,5,397,32"/>
+<area shape="rect" id="node2" href="$maze_8h.html" title="Field with walls, where mouse can move around." alt="" coords="114,229,179,256"/>
+<area shape="rect" id="node14" href="$mouse_8h.html" title="Represents functionality of robot." alt="" coords="653,229,725,256"/>
+<area shape="rect" id="node18" href="$random__algorythm_8h.html" title="Random Algorythm implementation." alt="" coords="457,80,665,107"/>
+<area shape="rect" id="node20" href="$left__algorythm_8h.html" title="Left Algorythm implementation." alt="" coords="35,80,218,107"/>
+<area shape="rect" id="node21" href="$right__algorythm_8h.html" title="Right Algorythm implementation." alt="" coords="242,80,433,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="257,528,311,555"/>
+<area shape="rect" id="node4" href="$tile_8h.html" title="Square part of maze with max 4 walls." alt="" coords="567,304,617,331"/>
+<area shape="rect" id="node11" title=" " alt="" coords="22,304,87,331"/>
+<area shape="rect" id="node12" title=" " alt="" coords="112,304,181,331"/>
+<area shape="rect" id="node13" title=" " alt="" coords="205,304,275,331"/>
+<area shape="rect" id="node5" title=" " alt="" coords="567,528,623,555"/>
+<area shape="rect" id="node6" title=" " alt="" coords="739,528,786,555"/>
+<area shape="rect" id="node7" href="$direction_8h.html" title="Direction enum." alt="" coords="508,453,591,480"/>
+<area shape="rect" id="node8" title=" " alt="" coords="629,379,699,405"/>
+<area shape="rect" id="node9" href="$wall_8h.html" title="Representation of inpassable object in maze." alt="" coords="499,379,554,405"/>
+<area shape="rect" id="node10" title=" " alt="" coords="400,379,475,405"/>
+<area shape="rect" id="node15" title=" " alt="" coords="735,304,775,331"/>
+<area shape="rect" id="node16" title=" " alt="" coords="799,304,903,331"/>
+<area shape="rect" id="node17" title=" " alt="" coords="641,304,711,331"/>
+<area shape="rect" id="node19" href="$algorythm_8h.html" title="Algorythm abstraction." alt="" coords="292,155,383,181"/>
+</map>

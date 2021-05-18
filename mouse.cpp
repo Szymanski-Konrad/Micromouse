@@ -39,7 +39,7 @@ DIRECTION Mouse::getDirection() {
 }
 
 std::string Mouse::getNumberOfMoves() {
-    return "Moves: " + std::to_string(this->moves);
+    return "Kroki: " + std::to_string(this->moves);
 }
 
 void Mouse::rotateToDirection(DIRECTION direction) {

@@ -1,0 +1,8 @@
+<map id="algorythms/algorythm.h" name="algorythms/algorythm.h">
+<area shape="rect" id="node1" title="Algorythm abstraction." alt="" coords="237,5,396,32"/>
+<area shape="rect" id="node2" href="$left__algorythm_8h.html" title="Left Algorythm implementation." alt="" coords="5,80,188,107"/>
+<area shape="rect" id="node5" href="$random__algorythm_8h.html" title="Random Algorythm implementation." alt="" coords="213,80,421,107"/>
+<area shape="rect" id="node6" href="$right__algorythm_8h.html" title="Right Algorythm implementation." alt="" coords="445,80,636,107"/>
+<area shape="rect" id="node3" href="$gamecontroller_8h.html" title="Controlling everything inside application." alt="" coords="257,155,376,181"/>
+<area shape="rect" id="node4" href="$micromouse_8h.html" title="Responsible for graphical part of application." alt="" coords="265,229,369,256"/>
+</map>

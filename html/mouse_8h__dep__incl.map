@@ -1,0 +1,9 @@
+<map id="mouse.h" name="mouse.h">
+<area shape="rect" id="node1" title="Represents functionality of robot." alt="" coords="459,5,531,32"/>
+<area shape="rect" id="node2" href="$algorythm_8h.html" title="Algorythm abstraction." alt="" coords="349,80,508,107"/>
+<area shape="rect" id="node4" href="$gamecontroller_8h.html" title="Controlling everything inside application." alt="" coords="369,229,488,256"/>
+<area shape="rect" id="node3" href="$left__algorythm_8h.html" title="Left Algorythm implementation." alt="" coords="5,155,188,181"/>
+<area shape="rect" id="node6" href="$random__algorythm_8h.html" title="Random Algorythm implementation." alt="" coords="213,155,421,181"/>
+<area shape="rect" id="node7" href="$right__algorythm_8h.html" title="Right Algorythm implementation." alt="" coords="445,155,636,181"/>
+<area shape="rect" id="node5" href="$micromouse_8h.html" title="Responsible for graphical part of application." alt="" coords="377,304,481,331"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="wall.h" name="wall.h">
+<area shape="rect" id="node1" title="Representation of inpassable object in maze." alt="" coords="82,5,137,32"/>
+<area shape="rect" id="node2" href="$direction_8h.html" title="Direction enum." alt="" coords="68,80,151,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,155,61,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="86,155,133,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="157,155,211,181"/>
+</map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tile_95',['Tile',['../class_tile.html',1,'']]]
+  ['leftalgorythm_107',['LeftAlgorythm',['../class_left_algorythm.html',1,'']]]
 ];

@@ -1,0 +1,11 @@
+<map id="tile.h" name="tile.h">
+<area shape="rect" id="node1" title="Square part of maze with max 4 walls." alt="" coords="313,5,364,32"/>
+<area shape="rect" id="node2" href="$maze_8h.html" title="Field with walls, where mouse can move around." alt="" coords="259,80,325,107"/>
+<area shape="rect" id="node9" href="$mouse_8h.html" title="Represents functionality of robot." alt="" coords="349,80,421,107"/>
+<area shape="rect" id="node3" href="$algorythm_8h.html" title="Algorythm abstraction." alt="" coords="259,155,418,181"/>
+<area shape="rect" id="node5" href="$gamecontroller_8h.html" title="Controlling everything inside application." alt="" coords="279,304,398,331"/>
+<area shape="rect" id="node4" href="$left__algorythm_8h.html" title="Left Algorythm implementation." alt="" coords="247,229,430,256"/>
+<area shape="rect" id="node7" href="$random__algorythm_8h.html" title="Random Algorythm implementation." alt="" coords="455,229,663,256"/>
+<area shape="rect" id="node8" href="$right__algorythm_8h.html" title="Right Algorythm implementation." alt="" coords="33,229,223,256"/>
+<area shape="rect" id="node6" href="$micromouse_8h.html" title="Responsible for graphical part of application." alt="" coords="287,379,391,405"/>
+</map>

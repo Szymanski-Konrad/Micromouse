@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['direction_181',['DIRECTION',['../direction_8h.html#aa268a41a13430b18e933ed40207178d0',1,'direction.h']]]
+  ['algorythm_206',['ALGORYTHM',['../algorythm_8h.html#aeeb39e133de4438fae1778f962ab00f0',1,'algorythm.h']]]
 ];

@@ -1,0 +1,4 @@
+<map id="gamecontroller.h" name="gamecontroller.h">
+<area shape="rect" id="node1" title="Controlling everything inside application." alt="" coords="5,5,124,32"/>
+<area shape="rect" id="node2" href="$micromouse_8h.html" title="Responsible for graphical part of application." alt="" coords="13,80,117,107"/>
+</map>

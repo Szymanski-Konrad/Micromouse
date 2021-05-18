@@ -11,7 +11,7 @@ Micromouse::Micromouse(QWidget *parent)
 {
     // Delcaration of inital values
     ui->setupUi(this);
-    ui->algorythmComboBox->addItems({"left-side", "right-side", "random"});
+    ui->algorythmComboBox->addItems({"lewa-strona", "prawa-strona", "random"});
     ui->algorythmComboBox->setCurrentIndex(0);
     ui->mazeComboBox->addItems({"maze1", "maze2", "maze3", "maze4"});
     ui->mazeComboBox->setCurrentIndex(0);
@@ -231,12 +231,12 @@ void Micromouse::moveMouse() {
 void Micromouse::showWinner(bool isUser) {
     mapTimer->stop();
     QMessageBox *winBox = new QMessageBox;
-    winBox->setWindowTitle("Congratulation!!");
+    winBox->setWindowTitle("Gratulacje!!");
     winBox->setIcon(QMessageBox::Information);
     if (isUser) {
-        winBox->setText("You are faster than algorythm :)");
+        winBox->setText("Jesteś szybszy niż algorytm :)");
     }else {
-        winBox->setText("Mouse reach center of maze");
+        winBox->setText("Mysz dotarła do środka labiryntu.");
     }
     winBox->exec();
     restart();
